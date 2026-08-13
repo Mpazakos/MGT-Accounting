@@ -2,54 +2,292 @@
 <html lang="el">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MGT | Accounting, Financial & Consulting Services</title>
-<meta name="description" content="MGT Accounting, Financial & Consulting Services">
+<meta name="description" content="MGT Accounting, Financial & Consulting Services. Λογιστικές, φοροτεχνικές, χρηματοοικονομικές και συμβουλευτικές υπηρεσίες.">
+<meta name="theme-color" content="#ffffff">
 <style>
-:root{--gold:#c49a45;--ink:#222;--muted:#666;--soft:#f5f5f3}
-*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
-header{border-bottom:1px solid #eee;position:sticky;top:0;background:rgba(255,255,255,.96);z-index:2}
-nav{max-width:1100px;margin:auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:28px;letter-spacing:10px}.navlinks a{color:#333;text-decoration:none;margin-left:22px;font-size:14px}
-.hero{min-height:70vh;display:grid;place-items:center;text-align:center;padding:70px 24px;background:linear-gradient(135deg,#fff,#f3f3f1)}
-.hero h1{font-size:clamp(54px,10vw,110px);letter-spacing:.22em;margin:0 0 12px;font-weight:400}
-.goldline{width:220px;height:2px;background:var(--gold);margin:22px auto}
-.hero p{letter-spacing:.22em;line-height:2;text-transform:uppercase;font-size:14px}
-.btn{display:inline-block;margin-top:28px;padding:14px 24px;border:1px solid var(--gold);color:#222;text-decoration:none}
-section{max-width:1100px;margin:auto;padding:75px 24px} h2{text-align:center;font-weight:400;font-size:34px;margin:0 0 42px}
+:root{
+  --gold:#c8a35a; --gold2:#e0c889; --ink:#1e1e1e; --muted:#6f6f6f;
+  --soft:#f7f7f4; --soft2:#efefec; --line:#e7e4dc; --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+a{color:inherit}
+.container{width:min(1120px,calc(100% - 40px));margin:auto}
+.topbar{background:#202020;color:#f7f7f7;font-size:13px}
+.topbar .container{display:flex;justify-content:space-between;gap:16px;padding:9px 0;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #eee}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brandmark{font-size:28px;letter-spacing:.32em;font-weight:400}
+.brandline{width:46px;height:1px;background:var(--gold)}
+.navlinks{display:flex;gap:26px;align-items:center;font-size:14px}
+.navlinks a{text-decoration:none}
+.navlinks a:hover{color:#9c7937}
+.cta-small{border:1px solid var(--gold);padding:10px 15px;border-radius:999px}
+.hero{min-height:78vh;display:grid;align-items:center;background:
+linear-gradient(120deg,rgba(255,255,255,.98),rgba(247,247,244,.94)),
+radial-gradient(circle at 80% 15%,#e5d6b7 0,transparent 32%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:86px 0}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#8d713d;margin-bottom:18px}
+h1{font-size:clamp(48px,8vw,92px);line-height:.95;margin:0;font-weight:350;letter-spacing:.14em}
+.goldrule{height:2px;background:linear-gradient(90deg,var(--gold2),var(--gold),transparent);width:280px;margin:28px 0}
+.hero h2{font-size:clamp(22px,3vw,34px);font-weight:400;margin:0 0 18px;max-width:760px}
+.hero p{color:var(--muted);max-width:680px;font-size:17px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:14px 20px;border-radius:4px;border:1px solid var(--gold);transition:.2s}
+.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+.hero-card{background:linear-gradient(145deg,#f5f5f3,#fff);border:1px solid var(--line);padding:34px;box-shadow:0 25px 60px rgba(0,0,0,.08)}
+.hero-card .mini{color:#9a793d;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.hero-card h3{font-size:28px;font-weight:400;margin:12px 0 18px}
+.hero-card ul{list-style:none;padding:0;margin:0}
+.hero-card li{padding:11px 0;border-bottom:1px solid var(--line)}
+.stats{background:#232323;color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:30px 24px;border-right:1px solid rgba(255,255,255,.12)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:26px;color:#e0c889;font-weight:500}
+.stat span{font-size:13px;color:#ccc}
+section{padding:82px 0}
+.section-kicker{text-align:center;text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:#9b7a3b}
+.section-title{text-align:center;font-size:38px;font-weight:400;margin:8px 0 14px}
+.section-sub{text-align:center;color:var(--muted);max-width:760px;margin:0 auto 46px}
 .services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:var(--soft);padding:32px 24px;border-top:2px solid var(--gold);min-height:180px}
-.card h3{font-weight:500}.card p{color:var(--muted);line-height:1.7}
-.contact{background:#f3f3f1;max-width:none}.contact-inner{max-width:850px;margin:auto;text-align:center}
-.contact a{color:#222;text-decoration:none}.contact p{font-size:18px;line-height:2}
-footer{text-align:center;padding:30px;color:#777;border-top:1px solid #eee;font-size:13px}
-@media(max-width:720px){.navlinks{display:none}.services{grid-template-columns:1fr}.hero{min-height:62vh}.hero p{letter-spacing:.12em}}
+.service{padding:28px;background:var(--soft);border:1px solid var(--line);min-height:225px;position:relative}
+.service:before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:var(--gold)}
+.icon{width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin-bottom:18px;font-size:20px}
+.service h3{margin:0 0 10px;font-weight:500;font-size:21px}
+.service p{margin:0;color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.panel{background:var(--soft);border:1px solid var(--line);padding:36px}
+.panel h3{font-size:30px;font-weight:400;margin-top:0}
+.checks{display:grid;gap:12px;margin-top:20px}
+.check{display:flex;gap:12px;align-items:flex-start}
+.check i{font-style:normal;color:#a17e3d}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{border-top:2px solid var(--gold);padding:24px;background:#fff}
+.step-num{font-size:42px;color:#ded4bf;font-weight:300}
+.step h4{margin:4px 0 8px;font-size:18px}
+.step p{color:var(--muted);margin:0}
+.band{background:linear-gradient(135deg,#242424,#303030);color:#fff}
+.band .section-title,.band .section-sub{text-align:left}
+.band .section-sub{margin-left:0;color:#d0d0d0}
+.band-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}
+.band-card{border:1px solid rgba(255,255,255,.18);padding:30px;background:rgba(255,255,255,.04)}
+.band-card a{color:#ead9b5;text-decoration:none}
+.faq{max-width:880px;margin:auto}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-size:18px;font-weight:500}
+details p{color:var(--muted);margin:12px 0 0}
+.contact-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px}
+.contact-card,.contact-info{border:1px solid var(--line);padding:34px;background:#fff}
+.contact-info{background:var(--soft)}
+.contact-row{padding:16px 0;border-bottom:1px solid var(--line)}
+.contact-row:last-child{border-bottom:0}
+.contact-row small{display:block;color:#888;text-transform:uppercase;letter-spacing:.1em}
+.contact-row a{text-decoration:none;font-size:19px}
+footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
+.footer-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.footer-brand{color:#fff;letter-spacing:.3em;font-size:24px}
+.legal{margin-top:26px;padding-top:18px;border-top:1px solid #333;font-size:12px;color:#888}
+.mobilebar{display:none}
+@media(max-width:900px){
+  .hero-grid,.split,.band-grid,.contact-wrap{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr 1fr}
+  .process{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat{border-bottom:1px solid rgba(255,255,255,.12)}
+}
+@media(max-width:680px){
+  .topbar{display:none}.navlinks{display:none}.container{width:min(100% - 28px,1120px)}
+  nav{height:66px}.brandmark{font-size:24px}
+  .hero-grid{padding:58px 0 72px;gap:28px}
+  .hero-card{padding:24px}
+  .services,.process,.stats-grid{grid-template-columns:1fr}
+  section{padding:64px 0}.section-title{font-size:32px}
+  .stat{border-right:0}
+  .mobilebar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:12px;right:12px;bottom:12px;z-index:80;background:#fff;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.18);border-radius:10px;overflow:hidden}
+  .mobilebar a{text-decoration:none;text-align:center;padding:13px 8px;font-size:14px}
+  .mobilebar a:first-child{background:#222;color:#fff}
+  footer{padding-bottom:88px}
+}
 </style>
 </head>
 <body>
-<header><nav><div class="logo">MGT</div><div class="navlinks"><a href="#services">Υπηρεσίες</a><a href="#contact">Επικοινωνία</a></div></nav></header>
+<div class="topbar">
+  <div class="container">
+    <div>MGT Accounting, Financial & Consulting Services</div>
+    <div>698 927 7642 · office@mgtaccounting.gr</div>
+  </div>
+</div>
+
+<header>
+  <nav class="container">
+    <a class="brand" href="#home"><span class="brandmark">MGT</span><span class="brandline"></span></a>
+    <div class="navlinks">
+      <a href="#services">Υπηρεσίες</a>
+      <a href="#about">Σχετικά</a>
+      <a href="#process">Συνεργασία</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="cta-small">Επικοινωνία</a>
+    </div>
+  </nav>
+</header>
+
 <main>
-<section class="hero">
-<div>
-<h1>MGT</h1><div class="goldline"></div>
-<p>Accounting, Financial<br>&amp; Consulting Services</p>
-<a class="btn" href="#contact">Επικοινωνήστε μαζί μας</a>
-</div>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Accounting · Financial · Consulting</div>
+      <h1>MGT</h1>
+      <div class="goldrule"></div>
+      <h2>Λογιστική, χρηματοοικονομική και συμβουλευτική υποστήριξη με επαγγελματική προσέγγιση.</h2>
+      <p>Υπηρεσίες για επιχειρήσεις και επαγγελματίες με στόχο την οργάνωση, τη συνέπεια και την καλύτερη οικονομική πληροφόρηση.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="tel:+306989277642">Καλέστε μας</a>
+        <a class="btn" href="mailto:office@mgtaccounting.gr">Στείλτε email</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <div class="mini">MGT Services</div>
+      <h3>Ολοκληρωμένη υποστήριξη</h3>
+      <ul>
+        <li>Λογιστικές υπηρεσίες</li>
+        <li>Φοροτεχνική υποστήριξη</li>
+        <li>Χρηματοοικονομική πληροφόρηση</li>
+        <li>Συμβουλευτικές υπηρεσίες</li>
+        <li>Υποστήριξη επιχειρηματικών αποφάσεων</li>
+      </ul>
+    </aside>
+  </div>
 </section>
+
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><b>01</b><span>Λογιστική οργάνωση</span></div>
+    <div class="stat"><b>02</b><span>Φοροτεχνική υποστήριξη</span></div>
+    <div class="stat"><b>03</b><span>Χρηματοοικονομική εικόνα</span></div>
+    <div class="stat"><b>04</b><span>Συμβουλευτική επιχειρήσεων</span></div>
+  </div>
+</div>
+
 <section id="services">
-<h2>Υπηρεσίες</h2>
-<div class="services">
-<div class="card"><h3>Λογιστικές &amp; Φοροτεχνικές</h3><p>Οργάνωση και υποστήριξη λογιστικών και φορολογικών υποχρεώσεων επιχειρήσεων και επαγγελματιών.</p></div>
-<div class="card"><h3>Χρηματοοικονομικές</h3><p>Χρηματοοικονομική πληροφόρηση και υποστήριξη για αποτελεσματικότερο επιχειρηματικό σχεδιασμό.</p></div>
-<div class="card"><h3>Συμβουλευτικές</h3><p>Επιχειρηματική συμβουλευτική με έμφαση στην οργάνωση, την ανάπτυξη και τη λήψη αποφάσεων.</p></div>
-</div>
+  <div class="container">
+    <div class="section-kicker">Υπηρεσίες</div>
+    <h2 class="section-title">Τι μπορούμε να αναλάβουμε</h2>
+    <p class="section-sub">Ένα ευρύ πλαίσιο υπηρεσιών για την καθημερινή λειτουργία, την οικονομική παρακολούθηση και την ανάπτυξη μιας επιχείρησης.</p>
+    <div class="services">
+      <div class="service"><div class="icon">Σ</div><h3>Λογιστική Παρακολούθηση</h3><p>Οργάνωση λογιστικών υποχρεώσεων και συστηματική παρακολούθηση οικονομικών δεδομένων.</p></div>
+      <div class="service"><div class="icon">Φ</div><h3>Φοροτεχνικές Υπηρεσίες</h3><p>Υποστήριξη φορολογικών υποχρεώσεων και έγκαιρη ενημέρωση για απαιτούμενες ενέργειες.</p></div>
+      <div class="service"><div class="icon">€</div><h3>Χρηματοοικονομική Πληροφόρηση</h3><p>Παρουσίαση βασικών οικονομικών στοιχείων για καλύτερη κατανόηση της εικόνας της επιχείρησης.</p></div>
+      <div class="service"><div class="icon">↗</div><h3>Business Consulting</h3><p>Συμβουλευτική υποστήριξη σε ζητήματα οργάνωσης, ανάπτυξης και επιχειρηματικών αποφάσεων.</p></div>
+      <div class="service"><div class="icon">◎</div><h3>Οργάνωση Διαδικασιών</h3><p>Βελτίωση ροών εργασίας και καλύτερη σύνδεση οικονομικής πληροφόρησης με τη διοίκηση.</p></div>
+      <div class="service"><div class="icon">✓</div><h3>Συνεχής Υποστήριξη</h3><p>Επικοινωνία και πρακτική καθοδήγηση σε καθημερινά οικονομικά και επιχειρηματικά θέματα.</p></div>
+    </div>
+  </div>
 </section>
-<section class="contact" id="contact"><div class="contact-inner">
-<h2>Επικοινωνία</h2>
-<p>Τηλέφωνο: <a href="tel:+306989277642">698 927 7642</a><br>
-Email: <a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a></p>
-<a class="btn" href="mailto:office@mgtaccounting.gr">Στείλτε email</a>
-</div></section>
+
+<section id="about" style="background:#fafaf8">
+  <div class="container split">
+    <div>
+      <div class="section-kicker" style="text-align:left">Σχετικά με την MGT</div>
+      <h2 class="section-title" style="text-align:left">Επαγγελματική προσέγγιση με έμφαση στην ουσία</h2>
+      <p style="color:var(--muted);font-size:17px">Στόχος της MGT είναι να προσφέρει σαφή, οργανωμένη και χρήσιμη οικονομική πληροφόρηση, ώστε ο επαγγελματίας ή η επιχείρηση να μπορεί να λειτουργεί με μεγαλύτερη συνέπεια και καλύτερη εικόνα των δεδομένων του.</p>
+    </div>
+    <div class="panel">
+      <h3>Τι δίνουμε προτεραιότητα</h3>
+      <div class="checks">
+        <div class="check"><i>◆</i><div><b>Οργάνωση</b><br><span style="color:var(--muted)">Καθαρή δομή και συστηματική παρακολούθηση.</span></div></div>
+        <div class="check"><i>◆</i><div><b>Συνέπεια</b><br><span style="color:var(--muted)">Έγκαιρη αντιμετώπιση υποχρεώσεων και εκκρεμοτήτων.</span></div></div>
+        <div class="check"><i>◆</i><div><b>Επικοινωνία</b><br><span style="color:var(--muted)">Άμεση και κατανοητή ενημέρωση.</span></div></div>
+        <div class="check"><i>◆</i><div><b>Επιχειρηματική οπτική</b><br><span style="color:var(--muted)">Σύνδεση λογιστικών δεδομένων με πραγματικές αποφάσεις.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-kicker">Συνεργασία</div>
+    <h2 class="section-title">Πώς ξεκινάμε</h2>
+    <p class="section-sub">Μια απλή διαδικασία για να καταλάβουμε τις ανάγκες σας και να οργανώσουμε τη συνεργασία.</p>
+    <div class="process">
+      <div class="step"><div class="step-num">01</div><h4>Επικοινωνία</h4><p>Μας περιγράφετε σύντομα την επιχείρηση και τι χρειάζεστε.</p></div>
+      <div class="step"><div class="step-num">02</div><h4>Καταγραφή αναγκών</h4><p>Εξετάζουμε τις βασικές απαιτήσεις και τις προτεραιότητές σας.</p></div>
+      <div class="step"><div class="step-num">03</div><h4>Πρόταση συνεργασίας</h4><p>Διαμορφώνουμε το κατάλληλο πλαίσιο υπηρεσιών.</p></div>
+      <div class="step"><div class="step-num">04</div><h4>Έναρξη</h4><p>Οργανώνουμε τις απαραίτητες πληροφορίες και ξεκινά η υποστήριξη.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container band-grid">
+    <div>
+      <div class="section-kicker" style="text-align:left;color:#e0c889">Επικοινωνήστε μαζί μας</div>
+      <h2 class="section-title">Θέλετε να συζητήσουμε τις ανάγκες της επιχείρησής σας;</h2>
+      <p class="section-sub">Επικοινωνήστε τηλεφωνικά ή με email και θα οργανώσουμε την πρώτη συζήτηση.</p>
+    </div>
+    <div class="band-card">
+      <div style="font-size:13px;color:#bbb">ΤΗΛΕΦΩΝΟ</div>
+      <div style="font-size:28px;margin:4px 0 18px"><a href="tel:+306989277642">698 927 7642</a></div>
+      <div style="font-size:13px;color:#bbb">EMAIL</div>
+      <div style="font-size:22px;margin-top:4px"><a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-kicker">FAQ</div>
+    <h2 class="section-title">Συχνές ερωτήσεις</h2>
+    <div class="faq">
+      <details><summary>Με ποιους επαγγελματίες και επιχειρήσεις μπορείτε να συνεργαστείτε;</summary><p>Η τελική συνεργασία εξαρτάται από τις ανάγκες και το αντικείμενο κάθε επιχείρησης. Η πρώτη επικοινωνία χρησιμοποιείται για να προσδιοριστεί το κατάλληλο πλαίσιο υπηρεσιών.</p></details>
+      <details><summary>Μπορώ να επικοινωνήσω μόνο για συμβουλευτική;</summary><p>Ναι. Η συνεργασία μπορεί να αφορά συγκεκριμένο συμβουλευτικό αντικείμενο ή ευρύτερη υποστήριξη, ανάλογα με την περίπτωση.</p></details>
+      <details><summary>Πώς ζητάω προσφορά;</summary><p>Καλέστε στο 698 927 7642 ή στείλτε email στο office@mgtaccounting.gr με μια σύντομη περιγραφή της επιχείρησης και των αναγκών σας.</p></details>
+      <details><summary>Υπάρχει δυνατότητα εξ αποστάσεως συνεργασίας;</summary><p>Η δυνατότητα και ο τρόπος συνεργασίας καθορίζονται ανά περίπτωση, ανάλογα με τις υπηρεσίες που απαιτούνται.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:#fafaf8">
+  <div class="container">
+    <div class="section-kicker">Contact</div>
+    <h2 class="section-title">Επικοινωνία</h2>
+    <p class="section-sub">Για πληροφορίες ή πρώτη επικοινωνία, χρησιμοποιήστε τα παρακάτω στοιχεία.</p>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3 style="font-size:28px;font-weight:400;margin-top:0">MGT</h3>
+        <p style="color:var(--muted)">Accounting, Financial & Consulting Services</p>
+        <div class="contact-row"><small>Τηλέφωνο</small><a href="tel:+306989277642">698 927 7642</a></div>
+        <div class="contact-row"><small>Email</small><a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a></div>
+      </div>
+      <div class="contact-card">
+        <h3 style="font-size:28px;font-weight:400;margin-top:0">Στείλτε μας μήνυμα</h3>
+        <p style="color:var(--muted)">Το κουμπί ανοίγει την εφαρμογή email της συσκευής σας με έτοιμη διεύθυνση παραλήπτη.</p>
+        <a class="btn primary" href="mailto:office@mgtaccounting.gr?subject=Επικοινωνία%20μέσω%20MGT%20Website">Νέο email προς MGT</a>
+        <a class="btn" style="margin-left:8px" href="tel:+306989277642">Τηλεφωνική κλήση</a>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
-<footer>© 2026 MGT — Accounting, Financial &amp; Consulting Services</footer>
-</body></html>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand">MGT</div><div>Accounting, Financial & Consulting Services</div></div>
+      <div>698 927 7642<br>office@mgtaccounting.gr</div>
+    </div>
+    <div class="legal">© 2026 MGT. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="mobilebar">
+  <a href="tel:+306989277642">Κλήση</a>
+  <a href="mailto:office@mgtaccounting.gr">Email</a>
+</div>
+</body>
+</html>
