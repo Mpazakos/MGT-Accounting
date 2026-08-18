@@ -16,7 +16,7 @@ html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
 a{color:inherit}
 .container{width:min(1120px,calc(100% - 40px));margin:auto}
-.topbar{background:#202020;color:#f7f7f7;font-size:13px}
+.topbar{background:#202020;color:#f7f7f7;font-size:12px}
 .topbar .container{display:flex;justify-content:space-between;gap:16px;padding:9px 0;flex-wrap:wrap}
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #eee}
 nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
@@ -88,7 +88,7 @@ details p{color:var(--muted);margin:12px 0 0}
 .contact-row{padding:16px 0;border-bottom:1px solid var(--line)}
 .contact-row:last-child{border-bottom:0}
 .contact-row small{display:block;color:#888;text-transform:uppercase;letter-spacing:.1em}
-.contact-row a{text-decoration:none;font-size:19px}
+.contact-row a,.contact-row span{font-size:18px;text-decoration:none}
 footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
 .footer-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .footer-brand{color:#fff;letter-spacing:.3em;font-size:24px}
@@ -109,8 +109,12 @@ footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
   .services,.process,.stats-grid{grid-template-columns:1fr}
   section{padding:64px 0}.section-title{font-size:32px}
   .stat{border-right:0}
+  .band-card{padding:22px}
+  .band-card .phone{font-size:18px!important;letter-spacing:.02em}
+  .band-card .email{font-size:14px!important;line-height:1.55;overflow-wrap:anywhere}
+  .contact-row a,.contact-row span{font-size:16px}
   .mobilebar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:12px;right:12px;bottom:12px;z-index:80;background:#fff;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.18);border-radius:10px;overflow:hidden}
-  .mobilebar a{text-decoration:none;text-align:center;padding:13px 8px;font-size:14px}
+  .mobilebar a{text-decoration:none;text-align:center;padding:11px 8px;font-size:13px}
   .mobilebar a:first-child{background:#222;color:#fff}
   footer{padding-bottom:88px}
 }
@@ -120,7 +124,7 @@ footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
 <div class="topbar">
   <div class="container">
     <div>MGT Accounting, Financial & Consulting Services</div>
-    <div>698 927 7642 · office@mgtaccounting.gr</div>
+    <div>698 927 7642 · office@mgtaccounting.gr · ataxtechnical@gmail.com</div>
   </div>
 </div>
 
@@ -144,8 +148,8 @@ footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
       <div class="eyebrow">Accounting · Financial · Consulting</div>
       <h1>MGT</h1>
       <div class="goldrule"></div>
-      <h2>Λογιστική, χρηματοοικονομική και συμβουλευτική υποστήριξη με επαγγελματική προσέγγιση.</h2>
-      <p>Υπηρεσίες για επιχειρήσεις και επαγγελματίες με στόχο την οργάνωση, τη συνέπεια και την καλύτερη οικονομική πληροφόρηση.</p>
+      <h2>Λογιστική, χρηματοοικονομική και συμβουλευτική υποστήριξη με επιχειρηματική οπτική.</h2>
+      <p>Υπηρεσίες για επιχειρήσεις και επαγγελματίες με έμφαση στη συμβουλευτική καθοδήγηση, την οικονομική πληροφόρηση και την άμεση συνεργασία — με δυνατότητα τακτικής επικοινωνίας και επισκέψεων στον χώρο σας.</p>
       <div class="hero-actions">
         <a class="btn primary" href="tel:+306989277642">Καλέστε μας</a>
         <a class="btn" href="mailto:office@mgtaccounting.gr">Στείλτε email</a>
@@ -153,13 +157,14 @@ footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
     </div>
     <aside class="hero-card">
       <div class="mini">MGT Services</div>
-      <h3>Ολοκληρωμένη υποστήριξη</h3>
+      <h3>Ολοκληρωμένη επιχειρηματική υποστήριξη</h3>
       <ul>
-        <li>Λογιστικές υπηρεσίες</li>
-        <li>Φοροτεχνική υποστήριξη</li>
-        <li>Χρηματοοικονομική πληροφόρηση</li>
-        <li>Συμβουλευτικές υπηρεσίες</li>
-        <li>Υποστήριξη επιχειρηματικών αποφάσεων</li>
+        <li>Λογιστικές & φοροτεχνικές υπηρεσίες</li>
+        <li>Financial & Business Consulting</li>
+        <li>Business Planning & οικονομικές προβλέψεις</li>
+        <li>Management Reporting & οικονομική ανάλυση</li>
+        <li>Υποστήριξη στρατηγικών επιχειρηματικών αποφάσεων</li>
+        <li>Εξωτερική επικοινωνία & επισκέψεις στον χώρο σας</li>
       </ul>
     </aside>
   </div>
@@ -169,8 +174,8 @@ footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
   <div class="container stats-grid">
     <div class="stat"><b>01</b><span>Λογιστική οργάνωση</span></div>
     <div class="stat"><b>02</b><span>Φοροτεχνική υποστήριξη</span></div>
-    <div class="stat"><b>03</b><span>Χρηματοοικονομική εικόνα</span></div>
-    <div class="stat"><b>04</b><span>Συμβουλευτική επιχειρήσεων</span></div>
+    <div class="stat"><b>03</b><span>Financial Management</span></div>
+    <div class="stat"><b>04</b><span>Business Consulting</span></div>
   </div>
 </div>
 
@@ -178,14 +183,15 @@ footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
   <div class="container">
     <div class="section-kicker">Υπηρεσίες</div>
     <h2 class="section-title">Τι μπορούμε να αναλάβουμε</h2>
-    <p class="section-sub">Ένα ευρύ πλαίσιο υπηρεσιών για την καθημερινή λειτουργία, την οικονομική παρακολούθηση και την ανάπτυξη μιας επιχείρησης.</p>
+    <p class="section-sub">Ολοκληρωμένη λογιστική, φορολογική και συμβουλευτική υποστήριξη, με στόχο όχι μόνο τη συμμόρφωση αλλά και την καλύτερη λειτουργία και ανάπτυξη της επιχείρησης.</p>
     <div class="services">
       <div class="service"><div class="icon">Σ</div><h3>Λογιστική Παρακολούθηση</h3><p>Οργάνωση λογιστικών υποχρεώσεων και συστηματική παρακολούθηση οικονομικών δεδομένων.</p></div>
       <div class="service"><div class="icon">Φ</div><h3>Φοροτεχνικές Υπηρεσίες</h3><p>Υποστήριξη φορολογικών υποχρεώσεων και έγκαιρη ενημέρωση για απαιτούμενες ενέργειες.</p></div>
-      <div class="service"><div class="icon">€</div><h3>Χρηματοοικονομική Πληροφόρηση</h3><p>Παρουσίαση βασικών οικονομικών στοιχείων για καλύτερη κατανόηση της εικόνας της επιχείρησης.</p></div>
-      <div class="service"><div class="icon">↗</div><h3>Business Consulting</h3><p>Συμβουλευτική υποστήριξη σε ζητήματα οργάνωσης, ανάπτυξης και επιχειρηματικών αποφάσεων.</p></div>
-      <div class="service"><div class="icon">◎</div><h3>Οργάνωση Διαδικασιών</h3><p>Βελτίωση ροών εργασίας και καλύτερη σύνδεση οικονομικής πληροφόρησης με τη διοίκηση.</p></div>
-      <div class="service"><div class="icon">✓</div><h3>Συνεχής Υποστήριξη</h3><p>Επικοινωνία και πρακτική καθοδήγηση σε καθημερινά οικονομικά και επιχειρηματικά θέματα.</p></div>
+      <div class="service"><div class="icon">€</div><h3>Financial Consulting</h3><p>Budgeting, cash-flow, οικονομικές προβλέψεις και ανάλυση βασικών οικονομικών δεικτών.</p></div>
+      <div class="service"><div class="icon">↗</div><h3>Business Consulting</h3><p>Συμβουλευτική για οργάνωση, ανάπτυξη, κοστολόγηση, κερδοφορία και επιχειρηματικές αποφάσεις.</p></div>
+      <div class="service"><div class="icon">◎</div><h3>Business Planning</h3><p>Business plans, επενδυτικός σχεδιασμός και υποστήριξη στην αξιολόγηση νέων επιχειρηματικών κινήσεων.</p></div>
+      <div class="service"><div class="icon">✓</div><h3>Management Reporting</h3><p>Μετατροπή των οικονομικών δεδομένων σε χρήσιμες αναφορές διοίκησης και πρακτική πληροφόρηση.</p></div>
+      <div class="service"><div class="icon">↔</div><h3>Εξωτερική Επικοινωνία & Επισκέψεις</h3><p>Άμεση συνεργασία με την επιχείρησή σας, επισκέψεις στον χώρο σας και συντονισμός όπου απαιτείται για πρακτική και συνεχή υποστήριξη.</p></div>
     </div>
   </div>
 </section>
@@ -194,16 +200,16 @@ footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
   <div class="container split">
     <div>
       <div class="section-kicker" style="text-align:left">Σχετικά με την MGT</div>
-      <h2 class="section-title" style="text-align:left">Επαγγελματική προσέγγιση με έμφαση στην ουσία</h2>
-      <p style="color:var(--muted);font-size:17px">Στόχος της MGT είναι να προσφέρει σαφή, οργανωμένη και χρήσιμη οικονομική πληροφόρηση, ώστε ο επαγγελματίας ή η επιχείρηση να μπορεί να λειτουργεί με μεγαλύτερη συνέπεια και καλύτερη εικόνα των δεδομένων του.</p>
+      <h2 class="section-title" style="text-align:left">Από τη λογιστική πληροφόρηση στην επιχειρηματική απόφαση</h2>
+      <p style="color:var(--muted);font-size:17px">Η MGT συνδυάζει λογιστική και φοροτεχνική υποστήριξη με χρηματοοικονομική και επιχειρηματική συμβουλευτική. Στόχος είναι η οικονομική πληροφορία να μην περιορίζεται στην τήρηση υποχρεώσεων, αλλά να λειτουργεί ως εργαλείο οργάνωσης, σχεδιασμού και ανάπτυξης.</p>
     </div>
     <div class="panel">
       <h3>Τι δίνουμε προτεραιότητα</h3>
       <div class="checks">
         <div class="check"><i>◆</i><div><b>Οργάνωση</b><br><span style="color:var(--muted)">Καθαρή δομή και συστηματική παρακολούθηση.</span></div></div>
-        <div class="check"><i>◆</i><div><b>Συνέπεια</b><br><span style="color:var(--muted)">Έγκαιρη αντιμετώπιση υποχρεώσεων και εκκρεμοτήτων.</span></div></div>
-        <div class="check"><i>◆</i><div><b>Επικοινωνία</b><br><span style="color:var(--muted)">Άμεση και κατανοητή ενημέρωση.</span></div></div>
-        <div class="check"><i>◆</i><div><b>Επιχειρηματική οπτική</b><br><span style="color:var(--muted)">Σύνδεση λογιστικών δεδομένων με πραγματικές αποφάσεις.</span></div></div>
+        <div class="check"><i>◆</i><div><b>Οικονομική εικόνα</b><br><span style="color:var(--muted)">Κατανόηση των αριθμών πίσω από την επιχείρηση.</span></div></div>
+        <div class="check"><i>◆</i><div><b>Στρατηγική</b><br><span style="color:var(--muted)">Σύνδεση οικονομικών δεδομένων με πραγματικές αποφάσεις.</span></div></div>
+        <div class="check"><i>◆</i><div><b>Ανάπτυξη</b><br><span style="color:var(--muted)">Υποστήριξη σχεδιασμού και επόμενων επιχειρηματικών κινήσεων.</span></div></div>
       </div>
     </div>
   </div>
@@ -215,9 +221,9 @@ footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
     <h2 class="section-title">Πώς ξεκινάμε</h2>
     <p class="section-sub">Μια απλή διαδικασία για να καταλάβουμε τις ανάγκες σας και να οργανώσουμε τη συνεργασία.</p>
     <div class="process">
-      <div class="step"><div class="step-num">01</div><h4>Επικοινωνία</h4><p>Μας περιγράφετε σύντομα την επιχείρηση και τι χρειάζεστε.</p></div>
-      <div class="step"><div class="step-num">02</div><h4>Καταγραφή αναγκών</h4><p>Εξετάζουμε τις βασικές απαιτήσεις και τις προτεραιότητές σας.</p></div>
-      <div class="step"><div class="step-num">03</div><h4>Πρόταση συνεργασίας</h4><p>Διαμορφώνουμε το κατάλληλο πλαίσιο υπηρεσιών.</p></div>
+      <div class="step"><div class="step-num">01</div><h4>Επικοινωνία</h4><p>Μας περιγράφετε σύντομα την επιχείρηση και τις ανάγκες σας.</p></div>
+      <div class="step"><div class="step-num">02</div><h4>Συνάντηση & επίσκεψη</h4><p>Όπου χρειάζεται, ερχόμαστε στον χώρο σας για άμεση εικόνα και ουσιαστική επικοινωνία.</p></div>
+      <div class="step"><div class="step-num">03</div><h4>Συμβουλευτική προσέγγιση</h4><p>Διαμορφώνουμε το κατάλληλο πλαίσιο λογιστικής, οικονομικής και επιχειρηματικής υποστήριξης.</p></div>
       <div class="step"><div class="step-num">04</div><h4>Έναρξη</h4><p>Οργανώνουμε τις απαραίτητες πληροφορίες και ξεκινά η υποστήριξη.</p></div>
     </div>
   </div>
@@ -228,13 +234,14 @@ footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
     <div>
       <div class="section-kicker" style="text-align:left;color:#e0c889">Επικοινωνήστε μαζί μας</div>
       <h2 class="section-title">Θέλετε να συζητήσουμε τις ανάγκες της επιχείρησής σας;</h2>
-      <p class="section-sub">Επικοινωνήστε τηλεφωνικά ή με email και θα οργανώσουμε την πρώτη συζήτηση.</p>
+      <p class="section-sub">Επικοινωνήστε μαζί μας για να οργανώσουμε τη συνεργασία, με άμεση επικοινωνία και δυνατότητα επίσκεψης στον χώρο της επιχείρησής σας.</p>
     </div>
     <div class="band-card">
-      <div style="font-size:13px;color:#bbb">ΤΗΛΕΦΩΝΟ</div>
-      <div style="font-size:28px;margin:4px 0 18px"><a href="tel:+306989277642">698 927 7642</a></div>
-      <div style="font-size:13px;color:#bbb">EMAIL</div>
-      <div style="font-size:22px;margin-top:4px"><a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a></div>
+      <div style="font-size:12px;color:#bbb">ΤΗΛΕΦΩΝΟ</div>
+      <div class="phone" style="font-size:20px;margin:4px 0 14px;color:#e0c889"><a href="tel:+306989277642">698 927 7642</a></div>
+      <div style="font-size:12px;color:#bbb">EMAIL</div>
+      <div class="email" style="font-size:15px;margin-top:4px;color:#e0c889"><span style="color:#c8a35a;margin-right:7px">•</span><a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a></div>
+      <div class="email" style="font-size:14px;margin-top:3px;color:#e0c889"><span style="color:#c8a35a;margin-right:7px">•</span><a href="mailto:ataxtechnical@gmail.com" style="opacity:.68;font-size:.92em">ataxtechnical@gmail.com</a></div>
     </div>
   </div>
 </section>
@@ -262,7 +269,8 @@ footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
         <h3 style="font-size:28px;font-weight:400;margin-top:0">MGT</h3>
         <p style="color:var(--muted)">Accounting, Financial & Consulting Services</p>
         <div class="contact-row"><small>Τηλέφωνο</small><a href="tel:+306989277642">698 927 7642</a></div>
-        <div class="contact-row"><small>Email</small><a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a></div>
+        <div class="contact-row"><small>Email</small><span style="color:#c8a35a;margin-right:7px">•</span><a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a><br><span style="color:#c8a35a;margin-right:7px">•</span><a href="mailto:ataxtechnical@gmail.com" style="font-size:13px;color:#8a8a8a">ataxtechnical@gmail.com</a></div>
+        <div class="contact-row"><small>Έδρα</small><span><strong>Πειραιάς</strong><br><span style="font-size:13px;color:#8a8a8a">Μεθώνης 36 &amp; Αντ. Βλαχάκου, 18545</span></span></div>
       </div>
       <div class="contact-card">
         <h3 style="font-size:28px;font-weight:400;margin-top:0">Στείλτε μας μήνυμα</h3>
@@ -279,7 +287,7 @@ footer{background:#171717;color:#cfcfcf;padding:38px 0 24px}
   <div class="container">
     <div class="footer-grid">
       <div><div class="footer-brand">MGT</div><div>Accounting, Financial & Consulting Services</div></div>
-      <div>698 927 7642<br>office@mgtaccounting.gr</div>
+      <div>698 927 7642<br>• office@mgtaccounting.gr<br><span style="font-size:11px;color:#777">• ataxtechnical@gmail.com</span><br><strong>Πειραιάς</strong><br><span style="font-size:11px;color:#777">Μεθώνης 36 &amp; Αντ. Βλαχάκου, 18545</span></div>
     </div>
     <div class="legal">© 2026 MGT. All rights reserved.</div>
   </div>
