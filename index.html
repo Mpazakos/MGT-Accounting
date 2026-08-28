@@ -1,1062 +1,144 @@
-<!doctype html><html lang="el"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>MGT | Business &amp; Financial Consulting</title><meta content="MGT Business &amp; Financial Consulting — επιχειρηματική και χρηματοοικονομική συμβουλευτική, λογιστική και φορολογική υποστήριξη για επιχειρήσεις και επαγγελματίες." name="description"/><style>
-    :root{
-      --ink:#171717;
-      --muted:#66625d;
-      --paper:#f7f6f2;
-      --white:#ffffff;
-      --line:#ddd9d1;
-      --soft:#efede7;
-      --accent:#252525;
-      --max:1180px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      color:var(--ink);
-      background:var(--paper);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-    }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
-
-    .topbar{
-      font-size:13px;
-      color:#4f4d49;
-      background:var(--paper);
-      border-bottom:1px solid var(--line);
-    }
-    .topbar .wrap{
-      min-height:38px;
-      display:flex;
-      align-items:center;
-      justify-content:flex-end;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:20;
-      background:transparent;
-      border:0;
-      height:0;
-      overflow:visible;
-    }
-    .nav{
-      min-height:78px;
-      pointer-events:none;
-      display:grid;
-      grid-template-columns:auto 1fr auto;
-      align-items:center;
-      gap:30px;
-    }
-    .brand{
-      pointer-events:auto;
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      white-space:nowrap;
-      grid-column:1;
-      justify-self:start;
-      padding:0;
-      border:0;
-      border-radius:0;
-      background:transparent;
-      box-shadow:none;
-    }
-    .brand:hover{
-      background:transparent;
-      box-shadow:none;
-      opacity:.72;
-    }
-    .brand strong{
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:26px;
-      letter-spacing:.16em;
-      font-weight:500;
-      font-style:italic;
-      line-height:1;
-    }
-    .brand span{
-      font-size:11px;
-      letter-spacing:.11em;
-      text-transform:uppercase;
-      color:#77736d;
-      padding-left:12px;
-      border-left:1px solid rgba(23,23,23,.12);
-      line-height:1.2;
-    }
-    nav{
-      pointer-events:auto;
-      display:flex;
-      gap:28px;
-      font-size:14px;
-      grid-column:2;
-      justify-self:end;
-    }
-    nav a{padding:8px 0}
-    nav a:hover{opacity:.62}
-
-    .hero{
-      min-height:650px;
-      display:flex;
-      align-items:center;
-      background:linear-gradient(90deg,rgba(247,246,242,1) 0%,rgba(247,246,242,.97) 58%,rgba(247,246,242,.78) 100%);
-    }
-    .hero-grid{
-      display:block;
-      padding:64px 0 90px;
-    }
-    .hero-copy{max-width:880px}
-    .eyebrow{
-      margin:0 0 20px;
-      font-size:13px;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      color:var(--muted);
-    }
-    h1,h2,h3{
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      font-weight:500;
-      font-style:italic;
-      line-height:1.18;
-      margin-top:0;
-    }
-    h1{
-      font-size:clamp(40px,5.2vw,64px);
-      max-width:820px;
-      margin-bottom:24px;
-      letter-spacing:-.018em;
-    }
-    .lead{
-      max-width:730px;
-      font-size:18px;
-      line-height:1.62;
-      color:#3f3d39;
-      margin:0;
-    }
-
-    .hero-side{
-      align-self:end;
-      padding-bottom:8px;
-    }
-    .hero-side p{
-      margin:0 0 26px;
-      color:var(--muted);
-      font-size:15px;
-    }
-    .text-link{
-      display:inline-block;
-      font-weight:600;
-      font-style:italic;
-      padding-bottom:3px;
-      border-bottom:1px solid currentColor;
-    }
-
-    section{padding:100px 0}
-    .section-kicker{
-      font-size:12px;
-      text-transform:uppercase;
-      letter-spacing:.14em;
-      color:var(--muted);
-      margin-bottom:16px;
-    }
-    h2{
-      font-size:clamp(30px,4vw,46px);
-      max-width:800px;
-      margin-bottom:24px;
-      letter-spacing:-.015em;
-    }
-    .section-intro{
-      max-width:740px;
-      font-size:16.5px;
-      line-height:1.65;
-      color:#4b4843;
-      margin:0;
-    }
-
-    .services{
-      background:var(--paper);
-    }
-    .service-list{
-      margin-top:60px;
-    }
-    .service-row{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:26px;
-      padding:34px 0;
-      align-items:start;
-    }
-    .service-row .num{display:none}
-    .service-row h3{
-      font-size:28px;
-      margin:0;
-    }
-    .service-row p{
-      margin:0;
-      color:var(--muted);
-      max-width:560px;
-    }
-
-    .about{
-      background:var(--paper);
-    }
-    .about-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:100px;
-      align-items:start;
-    }
-    .about-copy p{
-      font-size:16.5px;
-      line-height:1.72;
-      color:#44413d;
-      margin:0 0 20px;
-      font-style:italic;
-    }
-    .about h2{
-      font-style:italic;
-      font-weight:450;
-    }
-    .principles{
-      margin-top:8px;
-      border-top:1px solid var(--line);
-    }
-    .principle{
-      padding:22px 0;
-      border-bottom:1px solid var(--line);
-    }
-    .principle strong{
-      display:block;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      font-size:20px;
-      font-weight:500;
-      font-style:italic;
-      margin-bottom:6px;
-    }
-    .principle span{color:var(--muted)}
-
-    .approach .steps{
-      margin-top:60px;
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:34px;
-    }
-    .step{
-      padding-top:18px;
-    }
-    .step .n{display:none}
-    .step h3{
-      font-size:23px;
-      margin-bottom:12px;
-    }
-    .step p{
-      color:var(--muted);
-      margin:0;
-      font-size:15px;
-    }
-
-    .cta{
-      background:#1d1d1b;
-      color:white;
-    }
-    .cta-grid{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:80px;
-      align-items:end;
-    }
-    .cta h2{max-width:760px;margin-bottom:0}
-    .cta p{color:#d0cec8;margin:0 0 28px}
-    .cta .text-link{color:white}
-
-    .contact-grid{
-      display:grid;
-      grid-template-columns:.8fr 1.2fr;
-      gap:100px;
-      align-items:start;
-    }
-    .contact-lines{
-      border-top:1px solid var(--line);
-    }
-    .contact-line{
-      display:grid;
-      grid-template-columns:120px 1fr;
-      gap:20px;
-      padding:18px 0;
-      border-bottom:1px solid var(--line);
-    }
-    .phone-list{display:flex;flex-direction:column;gap:7px}
-    .phone-list a{display:inline-flex;align-items:center;gap:8px;width:max-content}
-    .phone-icon{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;opacity:.68;flex:0 0 auto}
-
-    .contact-line span:first-child{
-      font-size:12px;
-      letter-spacing:.1em;
-      text-transform:uppercase;
-      color:var(--muted);
-    }
-    .phone-list{display:flex;flex-direction:column;gap:7px}
-    .phone-item{display:flex;align-items:center;gap:8px;width:max-content}
-    .phone-item svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round;opacity:.62;flex:0 0 auto}
-    .phone-item:first-child svg path{fill:currentColor;stroke:none}
-
-    .legal-note{
-      margin-top:32px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .faq{
-      background:var(--paper);
-    }
-    details{
-      border-top:1px solid var(--line);
-      padding:20px 0;
-    }
-    details:last-child{border-bottom:1px solid var(--line)}
-    summary{
-      cursor:pointer;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      font-size:19px;
-      font-style:italic;
-      list-style:none;
-    }
-    summary::-webkit-details-marker{display:none}
-    details p{
-      color:var(--muted);
-      max-width:800px;
-      margin:14px 0 0;
-    }
-
-    footer{
-      padding:34px 0 42px;
-      background:#111;
-      color:#d6d4cf;
-      font-size:13px;
-    }
-    .footer-grid{
-      display:flex;
-      justify-content:space-between;
-      gap:24px;
-      flex-wrap:wrap;
-    }
-    .footer-brand{
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:19px;
-      color:white;
-    }
-
-    .mobile-toggle{display:none}
-
-    @media(max-width:900px){
-      .brand{padding:0;border-radius:0}
-      .brand strong{font-size:29px}
-      nav{display:none}
-      .hero{min-height:auto}
-      .hero-grid,.about-grid,.cta-grid,.contact-grid{
-        grid-template-columns:1fr;
-        gap:44px;
-      }
-      .hero-grid{padding:38px 0 70px}
-      .hero-mark{height:42px;margin-bottom:42px}
-      section{padding:76px 0}
-      .service-row{
-        grid-template-columns:1fr;
-      }
-
-      .approach .steps{grid-template-columns:1fr 1fr}
-    }
-
-    @media(max-width:600px){
-      .wrap{width:min(calc(100% - 28px),var(--max))}
-      .topbar .wrap{justify-content:center;gap:10px 16px;padding:8px 0}
-      .nav{
-        min-height:66px;
-        display:flex;
-        justify-content:flex-start;
-      }
-      .brand{
-        grid-column:auto;
-        justify-self:auto;
-      }
-      h1{font-size:36px;line-height:1.2}
-      h2{font-size:30px;line-height:1.24}
-      .lead{font-size:16.5px;line-height:1.6}
-      .service-row{
-        grid-template-columns:1fr;
-        gap:14px;
-        padding:26px 0;
-      }
-      .service-row h3{font-size:24px}
-      .approach .steps{grid-template-columns:1fr}
-
-      .contact-line{grid-template-columns:1fr;gap:6px}
-    }
-
-    .lang-switch{position:fixed;right:20px;top:18px;transform:none;display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.08em;z-index:30;pointer-events:auto}
-    .lang-switch a{border:0;background:transparent;padding:5px 2px;color:#77736d;font:inherit;cursor:pointer}
-    .lang-switch a.active{color:#171717;font-weight:600}
-    .lang-switch .sep{color:#bbb7b0;font-size:9px}
-    @media(max-width:600px){.lang-switch{right:14px;top:14px;font-size:10px;gap:6px}.nav{justify-content:flex-start!important}.brand{margin-left:0}}
-  </style>
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MGT | Accounting, Financial & Consulting Services</title>
+<meta name="description" content="MGT Accounting, Financial & Consulting Services — business consulting, financial advisory, accounting and tax support.">
 <style>
-  .lang-choice{position:fixed;right:14px;top:14px;z-index:9999;display:flex;align-items:center;gap:6px;font-size:10px;letter-spacing:.08em;color:#77736d;pointer-events:auto}
-  .lang-choice input{position:absolute;opacity:0;pointer-events:none}
-  .lang-choice label{cursor:pointer;padding:5px 2px;user-select:none}
-  .lang-choice .sep{color:#bbb7b0;font-size:9px}
-  .lang-page{display:none}
-  #lang-el:checked ~ .site-pages .page-el{display:block}
-  #lang-en:checked ~ .site-pages .page-en{display:block}
-  #lang-es:checked ~ .site-pages .page-es{display:block}
-  #lang-el:checked ~ .lang-choice label[for="lang-el"],
-  #lang-en:checked ~ .lang-choice label[for="lang-en"],
-  #lang-es:checked ~ .lang-choice label[for="lang-es"]{color:#171717;font-weight:700}
+:root{--ink:#1a1917;--muted:#6a665f;--paper:#f6f3ee;--paper2:#ece7df;--white:#fff;--line:#d8d1c7;--gold:#8d7654;--dark:#1f1f1c;--max:1240px}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--ink);background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased} a{color:inherit;text-decoration:none} .wrap{width:min(calc(100% - 38px),var(--max));margin:auto}
+.topbar{background:var(--dark);color:#eee9df;font-size:12px}.topbar .wrap{min-height:36px;display:flex;justify-content:flex-end;align-items:center;gap:18px;flex-wrap:wrap}.topbar a{opacity:.9}
+header{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,210,199,.7)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:14px}.brand strong{font-family:Georgia,"Times New Roman",serif;font-size:29px;font-weight:500;letter-spacing:.18em}.brand span{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7f796f;line-height:1.3}.nav-right{display:flex;align-items:center;gap:24px}nav{display:flex;align-items:center;gap:25px;font-size:13px}nav a{padding:8px 0}.langs{display:flex;gap:7px;border-left:1px solid var(--line);padding-left:18px}.langs button{appearance:none;border:0;background:transparent;padding:5px 3px;font:inherit;font-size:12px;color:#777;cursor:pointer}.langs button.active{color:#111;font-weight:700}
+.hero{background:#f3efe8;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;background-repeat:no-repeat;background-position:right 7% center;background-size:min(760px,52vw) auto;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 470'%3E%3Cg fill='none' stroke='%238d7654' stroke-width='1'%3E%3Cpath opacity='.22' d='M45 65H720M45 145H720M45 225H720M45 305H720M45 385H720'/%3E%3Cpath opacity='.28' d='M85 420V60'/%3E%3C/g%3E%3Cg fill='%238d7654' opacity='.18'%3E%3Crect x='130' y='317' width='34' height='103' rx='2'/%3E%3Crect x='210' y='284' width='34' height='136' rx='2'/%3E%3Crect x='290' y='302' width='34' height='118' rx='2'/%3E%3Crect x='370' y='238' width='34' height='182' rx='2'/%3E%3Crect x='450' y='207' width='34' height='213' rx='2'/%3E%3Crect x='530' y='164' width='34' height='256' rx='2'/%3E%3Crect x='610' y='124' width='34' height='296' rx='2'/%3E%3C/g%3E%3Cpath d='M105 349 C175 326 220 340 282 288 S389 276 445 220 S554 214 655 132' fill='none' stroke='%236e5a3f' stroke-width='3' opacity='.34'/%3E%3Cg fill='%236e5a3f' opacity='.38'%3E%3Ccircle cx='105' cy='349' r='4'/%3E%3Ccircle cx='282' cy='288' r='4'/%3E%3Ccircle cx='445' cy='220' r='4'/%3E%3Ccircle cx='655' cy='132' r='4'/%3E%3C/g%3E%3C/svg%3E")}.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f3efe8 0%,rgba(243,239,232,.96) 37%,rgba(243,239,232,.64) 66%,rgba(243,239,232,.18) 100%);pointer-events:none}.hero-grid{position:relative;z-index:1;min-height:620px;padding:104px 0 86px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:82px;align-items:center}.eyebrow,.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:#756f66;margin:0 0 18px}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.08;margin-top:0}h1{font-size:clamp(49px,6.5vw,82px);letter-spacing:-.035em;margin-bottom:25px;max-width:820px}h1 em{font-style:italic;color:#6e5a3f}.lead{font-size:19px;max-width:720px;color:#49453f;margin:0 0 32px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border:1px solid #292824;font-size:13px;letter-spacing:.02em}.btn.primary{background:#23221f;color:white}.btn.light{border-color:#d6cec2;color:#fff}.hero-card{background:transparent;border-left:1px solid #bdb3a5;padding:8px 0 8px 34px}.hero-card .small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7b746b}.hero-card h3{font-size:31px;margin:12px 0 24px}.hero-card .metric{padding:18px 0;border-top:1px solid var(--line)}.hero-card .metric b{display:block;font-size:15px;margin-bottom:3px}.hero-card .metric span{font-size:13px;color:var(--muted)}
+.trust{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}.trust-item{padding:27px 24px;border-right:1px solid var(--line)}.trust-item:first-child{padding-left:0}.trust-item:last-child{border-right:0}.trust-item b{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:19px;display:block}.trust-item span{font-size:12px;color:var(--muted)}
+section{padding:100px 0}h2{font-size:clamp(36px,5vw,58px);letter-spacing:-.02em;margin-bottom:22px;max-width:900px}.section-intro{font-size:17px;color:#57524b;max-width:760px;margin:0}.services{background:#fff}.service-grid{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);column-gap:34px;row-gap:0;border-top:1px solid var(--line)}.service-card{min-height:245px;padding:30px 4px 28px;border-bottom:1px solid var(--line);background:transparent;display:flex;flex-direction:column}.service-card:nth-child(-n+3){border-bottom:1px solid var(--line)}.service-card .num{font-size:11px;color:#9a8d7a;letter-spacing:.15em}.service-card h3{font-size:26px;margin:38px 0 12px}.service-card p{color:var(--muted);font-size:14px;margin:0}.service-card .line{width:38px;height:1px;background:var(--gold);margin-top:auto}
+.about{background:var(--paper)}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px}.about-copy>p{font-size:19px;color:#44413b;margin:0 0 22px}.principles{display:grid;grid-template-columns:1fr 1fr;gap:0 34px;margin-top:36px;border-top:1px solid var(--line)}.principle{background:transparent;border-bottom:1px solid var(--line);padding:22px 0}.principle b{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:20px;display:block;margin-bottom:7px}.principle span{font-size:13px;color:var(--muted)}
+.approach{background:#fff}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;margin-top:58px;border-top:1px solid #2b2a27}.step{background:transparent;border-top:0;padding:24px 0 0;min-height:205px}.step .n{font-size:11px;color:#9b8b73;letter-spacing:.16em}.step h3{font-size:23px;margin:30px 0 10px}.step p{font-size:13px;color:var(--muted);margin:0}
+.why{background:#24231f;color:#fff}.why .kicker{color:#bbb2a5}.why h2{color:#fff}.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px;background:transparent;margin-top:46px;border-top:1px solid #4a4943}.why-item{background:transparent;padding:28px 0;border-bottom:1px solid #4a4943}.why-item h3{font-size:24px;margin-bottom:10px}.why-item p{color:#cfc9bf;margin:0;font-size:14px}
+.contact{background:linear-gradient(135deg,#ede7dd,#f8f5ef)}.contact-grid{display:grid;grid-template-columns:1fr .9fr;gap:75px;align-items:start}.contact-card{background:#fff;border:1px solid var(--line);padding:32px}.contact-row{padding:18px 0;border-bottom:1px solid var(--line)}.contact-row small{display:block;color:#8b8378;text-transform:uppercase;letter-spacing:.12em;font-size:10px;margin-bottom:6px}.contact-row a,.contact-row span{font-size:18px}.contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+footer{background:#171714;color:#d8d2c8;padding:52px 0 30px}.footer-grid{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(520px,1.1fr);gap:70px;align-items:start}.footer-brand{font-family:Georgia,"Times New Roman",serif;font-size:33px;letter-spacing:.18em;margin-bottom:10px;color:#fff}.footer-sub{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#999287}.footer-links{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:12px 38px;font-size:13px;line-height:1.45}.footer-links a{border-bottom:1px solid transparent;width:max-content;max-width:100%}.footer-links a:hover{border-bottom-color:#777166;color:#fff}.legal{border-top:1px solid #34332e;margin-top:40px;padding-top:20px;font-size:11px;color:#817c73}
+.mobilebar{display:none}
+@media(min-width:1100px){
+  .wrap{width:min(calc(100% - 96px),var(--max))}
+  .nav{min-height:84px}
+  nav{gap:30px}
+  .hero-grid{grid-template-columns:minmax(0,1.25fr) minmax(360px,.75fr)}
+  .hero h1{max-width:790px}
+  .hero .lead{max-width:680px}
+  .services .wrap,.about .wrap,.approach .wrap,.why .wrap{max-width:1240px}
+  .about-grid{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:100px}
+  .footer-links{justify-self:end;width:100%}
+}
+@media(min-width:1500px){
+  :root{--max:1280px}
+  .hero-grid{min-height:650px}
+}
+@media(max-width:850px){.hero::before{opacity:.10;background-size:760px auto;background-position:68% 45%}.hero::after{background:linear-gradient(90deg,rgba(243,239,232,.96),rgba(243,239,232,.78))}.wrap{width:min(calc(100% - 28px),var(--max))}.topbar{display:none}.nav{min-height:68px}.brand span{display:none}nav{display:none}.nav-right{gap:10px}.langs{border:0;padding-left:0}.hero-grid{grid-template-columns:1fr;gap:35px;min-height:auto;padding:80px 0 60px}.hero-card{padding:24px}.trust-grid{grid-template-columns:1fr 1fr}.trust-item{border-bottom:1px solid var(--line)}.trust-item:nth-child(2){border-right:0}.trust-item:nth-child(3),.trust-item:nth-child(4){border-bottom:0}.service-grid{grid-template-columns:1fr}.about-grid,.contact-grid,.footer-grid{grid-template-columns:1fr;gap:40px}.principles{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr}section{padding:72px 0}.mobilebar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:10px;right:10px;bottom:10px;z-index:80;border:1px solid #d8d1c6;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.18)}.mobilebar a{text-align:center;padding:13px 6px;font-size:13px}.mobilebar a:first-child{background:#222;color:#fff}footer{padding-bottom:30px}}
+@media(max-width:540px){h1{font-size:46px}.lead{font-size:17px}.steps,.trust-grid{grid-template-columns:1fr}.trust-item{border-right:0!important;border-bottom:1px solid var(--line)!important}.trust-item:last-child{border-bottom:0!important}.hero-card h3{font-size:27px}.footer-links{grid-template-columns:1fr}}
+
+/* stronger accounting chart watermark */
+.hero::before{
+  opacity:.22 !important;
+  transform:scale(1.06);
+  background-size:78% auto !important;
+  background-position:82% 48% !important;
+}
+.hero::after{
+  opacity:.10 !important;
+}
+@media (max-width:900px){
+  .hero::before{opacity:.14 !important;background-size:120% auto !important;background-position:70% 52% !important;}
+}
+
+.full-services{padding:82px 0;background:#f5f2ec}
+.full-services h2{max-width:760px;margin:10px 0 36px;font-size:clamp(32px,4vw,52px);line-height:1.08}
+.section-kicker{font-size:12px;letter-spacing:.18em;color:#8a7455;font-weight:700}
+.service-lines{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(24,24,22,.16)}
+.service-lines>div{padding:25px 10px 25px 0;border-bottom:1px solid rgba(24,24,22,.16);display:flex;flex-direction:column;gap:8px}
+.service-lines>div:nth-child(odd){padding-right:34px}
+.service-lines>div:nth-child(even){padding-left:34px;border-left:1px solid rgba(24,24,22,.16)}
+.service-lines strong{font-size:18px}
+.service-lines span{opacity:.72;line-height:1.6}
+@media(max-width:760px){.service-lines{grid-template-columns:1fr}.service-lines>div,.service-lines>div:nth-child(odd),.service-lines>div:nth-child(even){padding:20px 0;border-left:0}.full-services{padding:58px 0}}
+
+.service-list-visible{margin-top:42px;border-top:1px solid rgba(24,24,22,.18)}
+.service-list-visible article{display:grid;grid-template-columns:70px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid rgba(24,24,22,.18);align-items:start}
+.service-list-visible article>span{font-size:12px;letter-spacing:.16em;color:#9b8461;font-weight:700;padding-top:5px}
+.service-list-visible h3{font-size:22px;margin:0 0 8px;font-weight:650}
+.service-list-visible p{margin:0;max-width:820px;line-height:1.65;opacity:.76}
+@media(min-width:1000px){
+  .service-list-visible{display:grid;grid-template-columns:1fr 1fr}
+  .service-list-visible article{grid-template-columns:54px 1fr;padding:28px 28px 28px 0}
+  .service-list-visible article:nth-child(even){padding-left:30px;border-left:1px solid rgba(24,24,22,.14)}
+}
+@media(max-width:760px){
+  .service-list-visible article{grid-template-columns:40px 1fr;gap:14px;padding:22px 0}
+  .service-list-visible h3{font-size:19px}
+}
+
 </style>
-</head><body>
-<input class="lang-radio" type="radio" name="lang" id="lang-el" checked>
-<input class="lang-radio" type="radio" name="lang" id="lang-en">
-<input class="lang-radio" type="radio" name="lang" id="lang-es">
-<div class="lang-choice" aria-label="Language">
-  <label for="lang-el">EL</label><span class="sep">/</span>
-  <label for="lang-en">EN</label><span class="sep">/</span>
-  <label for="lang-es">ES</label>
-</div>
-<div class="site-pages"><div class="lang-page page-el" data-langpage="el">
-<header>
-<div class="wrap nav">
-<a aria-label="MGT αρχική" class="brand" href="#home-el">
-<strong>MGT</strong>
-</a>
-<nav aria-label="Κύρια πλοήγηση">
-<a href="#services-el">Υπηρεσίες</a>
-<a href="#about-el">Ποιοι είμαστε</a>
-<a href="#approach-el">Συνεργασία</a>
-<a href="#faq-el">FAQ</a>
-<a href="#contact-el">Επικοινωνία</a>
-</nav>
-
-</div>
-</header>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><a href="tel:+302104632622">210 4632622</a><a href="tel:+306989277642">+30 698 927 7642</a><a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a><a href="mailto:ataxtechnical@gmail.com">ataxtechnical@gmail.com</a><a data-t="topLocation" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Piraeus%2C%20Attica">Πειραιάς, Αττική</a></div></div>
+<header><div class="wrap nav"><a class="brand" href="#home"><strong>MGT</strong><span>Accounting, Financial<br>& Consulting Services</span></a><div class="nav-right"><nav><a data-t="navServices" href="#services">Υπηρεσίες</a><a data-t="navAbout" href="#about">Ποιοι είμαστε</a><a data-t="navProcess" href="#process">Συνεργασία</a><a data-t="navContact" href="#footer-contact">Επικοινωνία</a></nav><div class="langs"><button id="elBtn" class="active">EL</button><button id="enBtn">EN</button></div></div></div></header>
 <main>
-<section class="hero" id="home-el">
-<div class="wrap hero-grid">
-<div class="hero-copy">
-<p class="eyebrow">MGT · Business &amp; Financial Consulting</p>
-<h1>Συμβουλευτική που συνδέει τους αριθμούς με την επιχειρηματική απόφαση.</h1>
-<p class="lead">Υποστηρίζουμε επιχειρήσεις και επαγγελματίες με επιχειρηματική και χρηματοοικονομική συμβουλευτική, οργανωμένη οικονομική πληροφόρηση και ολοκληρωμένη λογιστική και φορολογική υποστήριξη.</p>
-</div>
-</div>
-</section>
-<section class="services" id="services-el">
+<section class="hero" id="home"><div class="wrap hero-grid"><div><p class="eyebrow" data-t="heroEy">Business · Financial · Accounting</p><h1 data-t-html="heroTitle">Οικονομική πληροφόρηση που οδηγεί σε <em>καλύτερες αποφάσεις.</em></h1><p class="lead" data-t="heroLead">Υποστηρίζουμε επιχειρήσεις και επαγγελματίες με επιχειρηματική και χρηματοοικονομική συμβουλευτική, οργανωμένη οικονομική πληροφόρηση και ολοκληρωμένη λογιστική και φορολογική υποστήριξη.</p><div class="hero-actions"><a class="btn primary" data-t="heroBtn1" href="#services">Δείτε τις υπηρεσίες</a><a class="btn" data-t="heroBtn2" href="#footer-contact">Επικοινωνήστε μαζί μας</a></div></div><aside class="hero-card"><div class="small" data-t="approachLabel">Η προσέγγισή μας</div><h3 data-t="approachTitle">Από τους αριθμούς, στη διοικητική εικόνα.</h3><div class="metric"><b>Business & Tax Consulting</b><span data-t="m1">Οργάνωση, ανάπτυξη, κοστολόγηση & αποφάσεις</span></div><div class="metric"><b>Financial Advisory</b><span data-t="m2">Budgets, cash flow, forecasts & reporting</span></div><div class="metric"><b>Companies & Compliance</b><span data-t="m3">Συστηματική λογιστική και φορολογική υποστήριξη</span></div></aside></div></section>
+<div class="trust"><div class="wrap trust-grid"><div class="trust-item"><b data-t="trust1t">Οργάνωση</b><span data-t="trust1p">Καθαρή δομή και συνέπεια</span></div><div class="trust-item"><b data-t="trust2t">Πληροφόρηση</b><span data-t="trust2p">Οικονομική εικόνα που γίνεται κατανοητή</span></div><div class="trust-item"><b data-t="trust3t">Στρατηγική</b><span data-t="trust3p">Σύνδεση αριθμών με αποφάσεις</span></div><div class="trust-item"><b data-t="trust4t">Υποστήριξη</b><span data-t="trust4p">Άμεση και πρακτική συνεργασία</span></div></div></div>
+<section class="services expanded-services" id="services">
 <div class="wrap">
-<div class="section-kicker">Υπηρεσίες</div>
-<h2>Από την οικονομική εικόνα, στη σωστή επιχειρηματική κατεύθυνση.</h2>
-<p class="section-intro">Η προσέγγισή μας ξεκινά από τις πραγματικές ανάγκες της επιχείρησης και συνδέει τη συμβουλευτική με την οικονομική, λογιστική και φορολογική πληροφόρηση.</p>
-<div class="service-list">
-<article class="service-row">
-<div class="num">01</div>
-<h3>Business Consulting</h3>
-<p>Συμβουλευτική για οργάνωση, ανάπτυξη, κοστολόγηση, κερδοφορία και αξιολόγηση επιχειρηματικών αποφάσεων.</p>
-</article>
-<article class="service-row">
-<div class="num">02</div>
-<h3>Financial Consulting</h3>
-<p>Budgeting, cash-flow, οικονομικές προβλέψεις και ανάλυση βασικών οικονομικών δεικτών για καλύτερη διοικητική πληροφόρηση.</p>
-</article>
-<article class="service-row">
-<div class="num">03</div>
-<h3>Business Planning</h3>
-<p>Business plans, επενδυτικός σχεδιασμός και υποστήριξη στην αξιολόγηση νέων επιχειρηματικών κινήσεων.</p>
-</article>
-<article class="service-row">
-<div class="num">04</div>
-<h3>Management Reporting</h3>
-<p>Μετατροπή των οικονομικών δεδομένων σε χρήσιμες αναφορές διοίκησης και πρακτική πληροφόρηση.</p>
-</article>
-<article class="service-row">
-<div class="num">05</div>
-<h3>Accounting &amp; Tax</h3>
-<p>Οργάνωση λογιστικών υποχρεώσεων, συστηματική παρακολούθηση οικονομικών δεδομένων και φορολογική υποστήριξη.</p>
-</article>
-<article class="service-row">
-<div class="num">06</div>
-<h3>Εξωτερική υποστήριξη</h3>
-<p>Άμεση συνεργασία με την επιχείρησή σας, επικοινωνία και δυνατότητα επίσκεψης στον χώρο σας όπου απαιτείται.</p>
-</article>
-</div>
-</div>
-</section>
-<section class="about" id="about-el">
-<div class="wrap about-grid">
-<div>
-<div class="section-kicker">Ποιοι είμαστε</div>
-<h2>Οικονομική πληροφόρηση με επιχειρηματική οπτική.</h2>
-</div>
-<div class="about-copy">
-<p>Η MGT Business &amp; Financial Consulting συνδυάζει επιχειρηματική και χρηματοοικονομική συμβουλευτική με λογιστική και φορολογική υποστήριξη, με έμφαση στην καθαρή πληροφόρηση, την ταχύτητα και τη σύγχρονη οργάνωση.</p>
-<p>Δίνουμε έμφαση στην άμεση επικοινωνία, στη σωστή οργάνωση και στη συστηματική παρακολούθηση, ώστε η οικονομική πληροφορία να είναι καθαρή, έγκαιρη και ουσιαστικά χρήσιμη για τη λήψη αποφάσεων.</p>
-<div class="principles">
-<div class="principle">
-<strong>Οργάνωση</strong>
-<span>Καθαρή δομή και συστηματική παρακολούθηση.</span>
-</div>
-<div class="principle">
-<strong>Οικονομική εικόνα</strong>
-<span>Κατανόηση των αριθμών πίσω από την επιχείρηση.</span>
-</div>
-<div class="principle">
-<strong>Στρατηγική</strong>
-<span>Σύνδεση οικονομικών δεδομένων με πραγματικές αποφάσεις.</span>
-</div>
-<div class="principle">
-<strong>Ανάπτυξη</strong>
-<span>Υποστήριξη σχεδιασμού και επόμενων επιχειρηματικών κινήσεων.</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="approach" id="approach-el">
-<div class="wrap">
-<div class="section-kicker">Συνεργασία</div>
-<h2>Μια απλή και ουσιαστική διαδικασία.</h2>
-<p class="section-intro">Η συνεργασία διαμορφώνεται με βάση το αντικείμενο, το μέγεθος και τις πραγματικές ανάγκες κάθε επιχείρησης.</p>
-<div class="steps">
-<div class="step">
-<div class="n">01</div>
-<h3>Επικοινωνία</h3>
-<p>Μας περιγράφετε σύντομα την επιχείρηση και τις ανάγκες σας.</p>
-</div>
-<div class="step">
-<div class="n">02</div>
-<h3>Αποτύπωση αναγκών</h3>
-<p>Εξετάζουμε το πλαίσιο συνεργασίας και τις πληροφορίες που απαιτούνται.</p>
-</div>
-<div class="step">
-<div class="n">03</div>
-<h3>Συμβουλευτική προσέγγιση</h3>
-<p>Διαμορφώνουμε το κατάλληλο πλαίσιο οικονομικής και επιχειρηματικής υποστήριξης.</p>
-</div>
-<div class="step">
-<div class="n">04</div>
-<h3>Συνεργασία</h3>
-<p>Οργανώνουμε τις απαραίτητες πληροφορίες και ξεκινά η υποστήριξη.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="cta">
-<div class="wrap cta-grid">
-<h2>Θέλετε να συζητήσουμε τις ανάγκες της επιχείρησής σας;</h2>
-<div>
-<p>Επικοινωνήστε μαζί μας για να οργανώσουμε το κατάλληλο πλαίσιο συνεργασίας.</p>
-<a class="text-link" href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a>
-</div>
-</div>
-</section>
-<section class="faq" id="faq-el">
-<div class="wrap">
-<div class="section-kicker">FAQ</div>
-<h2>Συχνές ερωτήσεις</h2>
-<details>
-<summary>Με ποιους επαγγελματίες και επιχειρήσεις μπορείτε να συνεργαστείτε;</summary>
-<p>Η τελική συνεργασία εξαρτάται από τις ανάγκες και το αντικείμενο κάθε επιχείρησης. Η πρώτη επικοινωνία χρησιμοποιείται για να προσδιοριστεί το κατάλληλο πλαίσιο υπηρεσιών.</p>
-</details>
-<details>
-<summary>Μπορώ να επικοινωνήσω μόνο για συμβουλευτική;</summary>
-<p>Ναι. Η συνεργασία μπορεί να αφορά συγκεκριμένο συμβουλευτικό αντικείμενο ή ευρύτερη υποστήριξη, ανάλογα με την περίπτωση.</p>
-</details>
-<details>
-<summary>Πώς ζητάω προσφορά;</summary>
-<p>Καλέστε στο +30 698 927 7642 ή στείλτε email στο office@mgtaccounting.gr με μια σύντομη περιγραφή της επιχείρησης και των αναγκών σας.</p>
-</details>
-<details>
-<summary>Υπάρχει δυνατότητα εξ αποστάσεως συνεργασίας;</summary>
-<p>Η δυνατότητα και ο τρόπος συνεργασίας καθορίζονται ανά περίπτωση, ανάλογα με τις υπηρεσίες που απαιτούνται.</p>
-</details>
-</div>
-</section>
-<section id="contact-el">
-<div class="wrap contact-grid">
-<div>
-<div class="section-kicker">Επικοινωνία</div>
-<h2>Ας μιλήσουμε.</h2>
-<p class="section-intro">Για πληροφορίες ή πρώτη επικοινωνία, χρησιμοποιήστε τα παρακάτω στοιχεία.</p>
-</div>
-<div>
-<div class="contact-lines">
-<div class="contact-line">
-<span>Τηλέφωνο</span>
-<div class="phone-list">
-<a aria-label="Σταθερό 210 4632622" class="phone-item" href="tel:+302104632622">
-<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.7 3.8.7.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.8c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.3.2 2.6.7 3.8.1.4 0 .8-.3 1.1l-2.1 2.1z"></path></svg>
-<span>210 4632622</span>
-</a>
-<a aria-label="Κινητό 698 927 7642" class="phone-item" href="tel:+306989277642">
-<svg aria-hidden="true" viewbox="0 0 24 24"><rect height="20" rx="2" width="10" x="7" y="2"></rect><path d="M10 18h4"></path></svg>
-<span>+30 698 927 7642</span>
-</a>
-</div>
-</div>
-<div class="contact-line">
-<span>Email</span>
-<div>
-<a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a><br/>
-<a href="mailto:ataxtechnical@gmail.com">ataxtechnical@gmail.com</a>
-</div>
-</div>
-<div class="contact-line">
-<span>Έδρα μας</span>
-<div>
-<a href="https://www.google.com/maps/search/?api=1&amp;query=Piraeus%2C%20Greece" rel="noopener" target="_blank">Πειραιάς, Αττική</a>
-<br/>
-<a href="https://www.google.com/maps/search/?api=1&amp;query=%CE%91%CE%BD%CF%84%CE%B9%CF%80%CE%BB%CE%BF%CE%B9%CE%AC%CF%81%CF%87%CE%BF%CF%85%20%CE%92%CE%BB%CE%B1%CF%87%CE%AC%CE%BA%CE%BF%CF%85%20%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC%CF%82" rel="noopener" target="_blank">Βλαχάκου, Πειραιάς</a>
-</div>
-</div>
-</div>
-<p class="legal-note">MGT Business &amp; Financial Consulting</p>
-</div>
-</div>
-</section>
-</main>
-<footer>
-<div class="wrap footer-grid">
-<div>
-<div class="footer-brand">MGT</div>
-<div>Business &amp; Financial Consulting</div>
-</div>
-<div>
-        office@mgtaccounting.gr
-      </div>
-<div>© 2026 MGT. All rights reserved.</div>
-</div>
-</footer>
-</div><div class="lang-page page-en" data-langpage="en">
-<header>
-<div class="wrap nav">
-<a aria-label="MGT αρχική" class="brand" href="#home-en">
-<strong>MGT</strong>
-</a>
-<nav aria-label="Κύρια πλοήγηση">
-<a href="#services-en">Services</a>
-<a href="#about-en">About us</a>
-<a href="#approach-en">Working together</a>
-<a href="#faq-en">FAQ</a>
-<a href="#contact-en">Contact</a>
-</nav>
+<p class="kicker" data-t="svcK">Υπηρεσίες</p>
+<h2 data-t="svcT">Ολοκληρωμένη λογιστική, φορολογική και επιχειρηματική υποστήριξη.</h2>
+<p class="section-intro" data-t="svcI">Από την καθημερινή λογιστική και φορολογική παρακολούθηση έως μισθοδοσία, συντάξεις, εταιρικά θέματα, χρηματοοικονομική πληροφόρηση και ανάπτυξη επιχειρήσεων.</p>
 
-</div>
-</header>
-<main>
-<section class="hero" id="home-en">
-<div class="wrap hero-grid">
-<div class="hero-copy">
-<p class="eyebrow">MGT · Business &amp; Financial Consulting</p>
-<h1>Consulting that connects numbers with business decisions.</h1>
-<p class="lead">We support businesses and professionals with business and financial consulting, structured financial information, and comprehensive accounting and tax support.</p>
+<div class="service-list-visible">
+  <article><span>01</span><div><h3 data-t="sv1t">Λογιστικά & Φορολογικά</h3><p data-t="sv1p">Τήρηση βιβλίων, φορολογικές δηλώσεις, ΦΠΑ, myDATA, VIES, Intrastat και συστηματική φορολογική συμμόρφωση.</p></div></article>
+  <article><span>02</span><div><h3 data-t="sv2t">Μισθοδοσία & Εργατικά</h3><p data-t="sv2p">Υπολογισμός μισθοδοσίας, προσλήψεις, αποχωρήσεις, άδειες και υποστήριξη εργατικών και ασφαλιστικών υποχρεώσεων.</p></div></article>
+  <article><span>03</span><div><h3 data-t="sv3t">Συντάξεις & Ιδιώτες</h3><p data-t="sv3p">Υποστήριξη συνταξιοδοτικών διαδικασιών, φορολογικών δηλώσεων και λοιπών υποθέσεων φυσικών προσώπων.</p></div></article>
+  <article><span>04</span><div><h3 data-t="sv4t">Επιχειρήσεις & Εταιρικά</h3><p data-t="sv4p">Συστάσεις και μεταβολές εταιρειών, εταιρική συμμόρφωση, οικονομική παρακολούθηση και πρακτική υποστήριξη επιχειρήσεων.</p></div></article>
+  <article><span>05</span><div><h3 data-t="sv5t">Financial & Management Reporting</h3><p data-t="sv5p">Budgets, cash flow, forecasts, κοστολόγηση, οικονομικοί δείκτες και διοικητική πληροφόρηση για καλύτερες αποφάσεις.</p></div></article>
+  <article><span>06</span><div><h3 data-t="sv6t">Επιδοτήσεις & Ανάπτυξη</h3><p data-t="sv6p">Υποστήριξη επενδυτικών προγραμμάτων, business planning και σχεδιασμός ανάπτυξης της επιχείρησης.</p></div></article>
 </div>
 </div>
 </section>
-<section class="services" id="services-en">
-<div class="wrap">
-<div class="section-kicker">Services</div>
-<h2>From financial insight to the right business direction.</h2>
-<p class="section-intro">Our approach starts with the real needs of each business and connects consulting with financial, accounting and tax information.</p>
-<div class="service-list">
-<article class="service-row">
-<div class="num">01</div>
-<h3>Business Consulting</h3>
-<p>Consulting for organization, growth, costing, profitability and the evaluation of business decisions.</p>
-</article>
-<article class="service-row">
-<div class="num">02</div>
-<h3>Financial Consulting</h3>
-<p>Budgeting, cash flow, financial forecasts and analysis of key financial indicators for better management information.</p>
-</article>
-<article class="service-row">
-<div class="num">03</div>
-<h3>Business Planning</h3>
-<p>Business plans, investment planning and support in evaluating new business initiatives.</p>
-</article>
-<article class="service-row">
-<div class="num">04</div>
-<h3>Management Reporting</h3>
-<p>Turning financial data into useful management reports and practical information.</p>
-</article>
-<article class="service-row">
-<div class="num">05</div>
-<h3>Accounting &amp; Tax</h3>
-<p>Organization of accounting obligations, systematic monitoring of financial data and tax support.</p>
-</article>
-<article class="service-row">
-<div class="num">06</div>
-<h3>On-site support</h3>
-<p>Direct cooperation with your business, communication and the option of visiting your premises where required.</p>
-</article>
-</div>
-</div>
-</section>
-<section class="about" id="about-en">
-<div class="wrap about-grid">
-<div>
-<div class="section-kicker">About us</div>
-<h2>Financial information with a business perspective.</h2>
-</div>
-<div class="about-copy">
-<p>MGT Business &amp; Financial Consulting combines business and financial consulting with accounting and tax support, with emphasis on clear information, responsiveness and modern organization.</p>
-<p>We emphasize direct communication, proper organization and systematic monitoring so that financial information is clear, timely and genuinely useful for decision-making.</p>
-<div class="principles">
-<div class="principle">
-<strong>Organization</strong>
-<span>Clear structure and systematic monitoring.</span>
-</div>
-<div class="principle">
-<strong>Financial overview</strong>
-<span>Understanding the numbers behind the business.</span>
-</div>
-<div class="principle">
-<strong>Strategy</strong>
-<span>Connecting financial data with real decisions.</span>
-</div>
-<div class="principle">
-<strong>Growth</strong>
-<span>Support for planning and the next business moves.</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="approach" id="approach-en">
-<div class="wrap">
-<div class="section-kicker">Working together</div>
-<h2>A simple and meaningful process.</h2>
-<p class="section-intro">Our cooperation is shaped around the scope, size and real needs of each business.</p>
-<div class="steps">
-<div class="step">
-<div class="n">01</div>
-<h3>Contact</h3>
-<p>Briefly tell us about your business and your needs.</p>
-</div>
-<div class="step">
-<div class="n">02</div>
-<h3>Needs assessment</h3>
-<p>We review the cooperation framework and the information required.</p>
-</div>
-<div class="step">
-<div class="n">03</div>
-<h3>Consulting approach</h3>
-<p>We shape the appropriate framework for financial and business support.</p>
-</div>
-<div class="step">
-<div class="n">04</div>
-<h3>Working together</h3>
-<p>We organize the necessary information and begin providing support.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="cta">
-<div class="wrap cta-grid">
-<h2>Would you like to discuss your business needs?</h2>
-<div>
-<p>Contact us to organize the right framework for working together.</p>
-<a class="text-link" href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a>
-</div>
-</div>
-</section>
-<section class="faq" id="faq-en">
-<div class="wrap">
-<div class="section-kicker">FAQ</div>
-<h2>Frequently asked questions</h2>
-<details>
-<summary>Which professionals and businesses can you work with?</summary>
-<p>The final scope depends on the needs and activity of each business. The first contact is used to determine the appropriate service framework.</p>
-</details>
-<details>
-<summary>Can I contact you only for consulting?</summary>
-<p>Yes. Our cooperation may concern a specific consulting matter or broader support, depending on the case.</p>
-</details>
-<details>
-<summary>How do I request a quote?</summary>
-<p>Call +30 698 927 7642 or email office@mgtaccounting.gr with a brief description of your business and needs.</p>
-</details>
-<details>
-<summary>Is remote cooperation available?</summary>
-<p>The availability and method of cooperation are determined case by case, depending on the services required.</p>
-</details>
-</div>
-</section>
-<section id="contact-en">
-<div class="wrap contact-grid">
-<div>
-<div class="section-kicker">Contact</div>
-<h2>Let’s talk.</h2>
-<p class="section-intro">For information or an initial discussion, use the contact details below.</p>
-</div>
-<div>
-<div class="contact-lines">
-<div class="contact-line">
-<span>Phone</span>
-<div class="phone-list">
-<a aria-label="Σταθερό 210 4632622" class="phone-item" href="tel:+302104632622">
-<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.7 3.8.7.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.8c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.3.2 2.6.7 3.8.1.4 0 .8-.3 1.1l-2.1 2.1z"></path></svg>
-<span>210 4632622</span>
-</a>
-<a aria-label="Κινητό 698 927 7642" class="phone-item" href="tel:+306989277642">
-<svg aria-hidden="true" viewbox="0 0 24 24"><rect height="20" rx="2" width="10" x="7" y="2"></rect><path d="M10 18h4"></path></svg>
-<span>+30 698 927 7642</span>
-</a>
-</div>
-</div>
-<div class="contact-line">
-<span>Email</span>
-<div>
-<a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a><br/>
-<a href="mailto:ataxtechnical@gmail.com">ataxtechnical@gmail.com</a>
-</div>
-</div>
-<div class="contact-line">
-<span>Our office</span>
-<div>
-<a href="https://www.google.com/maps/search/?api=1&amp;query=Piraeus%2C%20Greece" rel="noopener" target="_blank">Piraeus, Attica</a>
-<br/>
-<a href="https://www.google.com/maps/search/?api=1&amp;query=%CE%91%CE%BD%CF%84%CE%B9%CF%80%CE%BB%CE%BF%CE%B9%CE%AC%CF%81%CF%87%CE%BF%CF%85%20%CE%92%CE%BB%CE%B1%CF%87%CE%AC%CE%BA%CE%BF%CF%85%20%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC%CF%82" rel="noopener" target="_blank">Vlachakou, Piraeus</a>
-</div>
-</div>
-</div>
-<p class="legal-note">MGT Business &amp; Financial Consulting</p>
-</div>
-</div>
-</section>
+<section class="about" id="about"><div class="wrap about-grid"><div><p class="kicker" data-t="aboutK">Ποιοι είμαστε</p><h2 data-t="aboutT">Οικονομική πληροφόρηση με επιχειρηματική οπτική.</h2></div><div class="about-copy"><p data-t="aboutP1">Η MGT συνδυάζει επιχειρηματική και χρηματοοικονομική συμβουλευτική με λογιστική και φορολογική υποστήριξη, με έμφαση στην καθαρή πληροφόρηση, την ταχύτητα και τη σύγχρονη οργάνωση.</p><p data-t="aboutP2">Στόχος μας είναι η οικονομική πληροφορία να είναι έγκαιρη, κατανοητή και ουσιαστικά χρήσιμη για τη λήψη αποφάσεων.</p><div class="principles"><div class="principle"><b data-t="p1t">Καθαρή πληροφόρηση</b><span data-t="p1p">Η εικόνα της επιχείρησης παρουσιάζεται με τρόπο πρακτικό και κατανοητό.</span></div><div class="principle"><b data-t="p2t">Συστηματική παρακολούθηση</b><span data-t="p2p">Οργάνωση, συνέπεια και έγκαιρη ενημέρωση.</span></div><div class="principle"><b data-t="p3t">Business-first προσέγγιση</b><span data-t="p3p">Δεν βλέπουμε τη λογιστική απομονωμένα από την επιχείρηση.</span></div><div class="principle"><b data-t="p4t">Άμεση συνεργασία</b><span data-t="p4p">Πρακτική επικοινωνία και δυνατότητα on-site υποστήριξης.</span></div></div></div></div></section>
+<section class="approach" id="process"><div class="wrap"><p class="kicker" data-t="procK">Πώς συνεργαζόμαστε</p><h2 data-t="procT">Μια καθαρή διαδικασία, με ξεκάθαρα βήματα.</h2><p class="section-intro" data-t="procI">Το πλαίσιο συνεργασίας προσαρμόζεται στο μέγεθος, το αντικείμενο και τις πραγματικές ανάγκες της κάθε επιχείρησης.</p><div class="steps" id="stepsGrid"></div></div></section>
+<section class="why"><div class="wrap"><p class="kicker" data-t="whyK">Why MGT</p><h2 data-t="whyT">Πιο κοντά στην επιχείρηση. Πιο καθαρά στους αριθμούς.</h2><div class="why-grid" id="whyGrid"></div></div></section>
 </main>
-<footer>
-<div class="wrap footer-grid">
-<div>
-<div class="footer-brand">MGT</div>
-<div>Business &amp; Financial Consulting</div>
-</div>
-<div>
-        office@mgtaccounting.gr
-      </div>
-<div>© 2026 MGT. All rights reserved.</div>
-</div>
-</footer>
-</div><div class="lang-page page-es" data-langpage="es">
-<header>
-<div class="wrap nav">
-<a aria-label="MGT αρχική" class="brand" href="#home-es">
-<strong>MGT</strong>
-</a>
-<nav aria-label="Κύρια πλοήγηση">
-<a href="#services-es">Servicios</a>
-<a href="#about-es">Quiénes somos</a>
-<a href="#approach-es">Colaboración</a>
-<a href="#faq-es">FAQ</a>
-<a href="#contact-es">Contacto</a>
-</nav>
-
-</div>
-</header>
-<main>
-<section class="hero" id="home-es">
-<div class="wrap hero-grid">
-<div class="hero-copy">
-<p class="eyebrow">MGT · Business &amp; Financial Consulting</p>
-<h1>Consultoría que conecta los números con las decisiones empresariales.</h1>
-<p class="lead">Apoyamos a empresas y profesionales con consultoría empresarial y financiera, información financiera estructurada y un servicio integral de contabilidad y fiscalidad.</p>
-</div>
-</div>
-</section>
-<section class="services" id="services-es">
-<div class="wrap">
-<div class="section-kicker">Servicios</div>
-<h2>De la visión financiera a la dirección empresarial adecuada.</h2>
-<p class="section-intro">Nuestro enfoque parte de las necesidades reales de cada empresa y conecta la consultoría con la información financiera, contable y fiscal.</p>
-<div class="service-list">
-<article class="service-row">
-<div class="num">01</div>
-<h3>Business Consulting</h3>
-<p>Consultoría para organización, crecimiento, costes, rentabilidad y evaluación de decisiones empresariales.</p>
-</article>
-<article class="service-row">
-<div class="num">02</div>
-<h3>Financial Consulting</h3>
-<p>Presupuestos, flujo de caja, previsiones financieras y análisis de indicadores clave para una mejor información de gestión.</p>
-</article>
-<article class="service-row">
-<div class="num">03</div>
-<h3>Business Planning</h3>
-<p>Planes de negocio, planificación de inversiones y apoyo en la evaluación de nuevas iniciativas empresariales.</p>
-</article>
-<article class="service-row">
-<div class="num">04</div>
-<h3>Management Reporting</h3>
-<p>Transformación de los datos financieros en informes de gestión útiles e información práctica.</p>
-</article>
-<article class="service-row">
-<div class="num">05</div>
-<h3>Accounting &amp; Tax</h3>
-<p>Organización de obligaciones contables, seguimiento sistemático de datos financieros y apoyo fiscal.</p>
-</article>
-<article class="service-row">
-<div class="num">06</div>
-<h3>Soporte presencial</h3>
-<p>Colaboración directa con su empresa, comunicación y posibilidad de visitar sus instalaciones cuando sea necesario.</p>
-</article>
-</div>
-</div>
-</section>
-<section class="about" id="about-es">
-<div class="wrap about-grid">
-<div>
-<div class="section-kicker">Quiénes somos</div>
-<h2>Información financiera con perspectiva empresarial.</h2>
-</div>
-<div class="about-copy">
-<p>MGT Business &amp; Financial Consulting combina consultoría empresarial y financiera con apoyo contable y fiscal, con énfasis en la información clara, la agilidad y la organización moderna.</p>
-<p>Damos prioridad a la comunicación directa, la buena organización y el seguimiento sistemático para que la información financiera sea clara, oportuna y realmente útil para la toma de decisiones.</p>
-<div class="principles">
-<div class="principle">
-<strong>Organización</strong>
-<span>Estructura clara y seguimiento sistemático.</span>
-</div>
-<div class="principle">
-<strong>Visión financiera</strong>
-<span>Comprender los números detrás de la empresa.</span>
-</div>
-<div class="principle">
-<strong>Estrategia</strong>
-<span>Conectar los datos financieros con decisiones reales.</span>
-</div>
-<div class="principle">
-<strong>Crecimiento</strong>
-<span>Apoyo en la planificación y en los próximos pasos empresariales.</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="approach" id="approach-es">
-<div class="wrap">
-<div class="section-kicker">Colaboración</div>
-<h2>Un proceso sencillo y eficaz.</h2>
-<p class="section-intro">La colaboración se adapta al objeto, tamaño y necesidades reales de cada empresa.</p>
-<div class="steps">
-<div class="step">
-<div class="n">01</div>
-<h3>Contacto</h3>
-<p>Descríbanos brevemente su empresa y sus necesidades.</p>
-</div>
-<div class="step">
-<div class="n">02</div>
-<h3>Análisis de necesidades</h3>
-<p>Revisamos el marco de colaboración y la información necesaria.</p>
-</div>
-<div class="step">
-<div class="n">03</div>
-<h3>Enfoque de consultoría</h3>
-<p>Definimos el marco adecuado de apoyo financiero y empresarial.</p>
-</div>
-<div class="step">
-<div class="n">04</div>
-<h3>Colaboración</h3>
-<p>Organizamos la información necesaria y comenzamos el apoyo.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="cta">
-<div class="wrap cta-grid">
-<h2>¿Quiere hablar sobre las necesidades de su empresa?</h2>
-<div>
-<p>Contáctenos para organizar el marco de colaboración adecuado.</p>
-<a class="text-link" href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a>
-</div>
-</div>
-</section>
-<section class="faq" id="faq-es">
-<div class="wrap">
-<div class="section-kicker">FAQ</div>
-<h2>Preguntas frecuentes</h2>
-<details>
-<summary>¿Con qué profesionales y empresas pueden trabajar?</summary>
-<p>El alcance final depende de las necesidades y la actividad de cada empresa. El primer contacto sirve para definir el marco de servicios adecuado.</p>
-</details>
-<details>
-<summary>¿Puedo contactar solo para consultoría?</summary>
-<p>Sí. La colaboración puede centrarse en un asunto concreto de consultoría o en un apoyo más amplio, según el caso.</p>
-</details>
-<details>
-<summary>¿Cómo solicito un presupuesto?</summary>
-<p>Llame al +30 698 927 7642 o escriba a office@mgtaccounting.gr con una breve descripción de su empresa y sus necesidades.</p>
-</details>
-<details>
-<summary>¿Es posible colaborar a distancia?</summary>
-<p>La posibilidad y la forma de colaboración se determinan caso por caso, según los servicios necesarios.</p>
-</details>
-</div>
-</section>
-<section id="contact-es">
-<div class="wrap contact-grid">
-<div>
-<div class="section-kicker">Contacto</div>
-<h2>Hablemos.</h2>
-<p class="section-intro">Para información o un primer contacto, utilice los datos que aparecen a continuación.</p>
-</div>
-<div>
-<div class="contact-lines">
-<div class="contact-line">
-<span>Teléfono</span>
-<div class="phone-list">
-<a aria-label="Σταθερό 210 4632622" class="phone-item" href="tel:+302104632622">
-<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.7 3.8.7.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.8c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.3.2 2.6.7 3.8.1.4 0 .8-.3 1.1l-2.1 2.1z"></path></svg>
-<span>210 4632622</span>
-</a>
-<a aria-label="Κινητό 698 927 7642" class="phone-item" href="tel:+306989277642">
-<svg aria-hidden="true" viewbox="0 0 24 24"><rect height="20" rx="2" width="10" x="7" y="2"></rect><path d="M10 18h4"></path></svg>
-<span>+30 698 927 7642</span>
-</a>
-</div>
-</div>
-<div class="contact-line">
-<span>Email</span>
-<div>
-<a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a><br/>
-<a href="mailto:ataxtechnical@gmail.com">ataxtechnical@gmail.com</a>
-</div>
-</div>
-<div class="contact-line">
-<span>Nuestra sede</span>
-<div>
-<a href="https://www.google.com/maps/search/?api=1&amp;query=Piraeus%2C%20Greece" rel="noopener" target="_blank">El Pireo, Ática</a>
-<br/>
-<a href="https://www.google.com/maps/search/?api=1&amp;query=%CE%91%CE%BD%CF%84%CE%B9%CF%80%CE%BB%CE%BF%CE%B9%CE%AC%CF%81%CF%87%CE%BF%CF%85%20%CE%92%CE%BB%CE%B1%CF%87%CE%AC%CE%BA%CE%BF%CF%85%20%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC%CF%82" rel="noopener" target="_blank">Vlachakou, El Pireo</a>
-</div>
-</div>
-</div>
-<p class="legal-note">MGT Business &amp; Financial Consulting</p>
-</div>
-</div>
-</section>
-</main>
-<footer>
-<div class="wrap footer-grid">
-<div>
-<div class="footer-brand">MGT</div>
-<div>Business &amp; Financial Consulting</div>
-</div>
-<div>
-        office@mgtaccounting.gr
-      </div>
-<div>© 2026 MGT. All rights reserved.</div>
-</div>
-</footer>
-</div></div></body></html>
+<footer id="footer-contact"><div class="wrap"><div class="footer-grid"><div><div class="footer-brand">MGT</div><div class="footer-sub">Accounting, Financial & Consulting Services</div></div><div class="footer-links"><a href="tel:+302104632622">210 4632622</a><a href="tel:+306989277642">+30 698 927 7642</a><a href="mailto:office@mgtaccounting.gr">office@mgtaccounting.gr</a><a href="mailto:ataxtechnical@gmail.com">ataxtechnical@gmail.com</a><a data-t="footerLoc1" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Piraeus%2C%20Attica">Πειραιάς, Αττική</a><a data-t="footerLoc2" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%CE%92%CE%BB%CE%B1%CF%87%CE%AC%CE%BA%CE%BF%CF%85%20%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC%CF%82">Πειραιάς – Βλαχάκου</a></div></div><div class="legal">© 2026 MGT. All rights reserved.</div></div></footer>
+<script>
+const data={
+el:{navServices:'Υπηρεσίες',navAbout:'Ποιοι είμαστε',navProcess:'Συνεργασία',navContact:'Επικοινωνία',heroEy:'Business · Financial · Accounting',heroTitle:'Οικονομική πληροφόρηση που οδηγεί σε <em>καλύτερες αποφάσεις.</em>',heroLead:'Υποστηρίζουμε επιχειρήσεις και επαγγελματίες με επιχειρηματική και χρηματοοικονομική συμβουλευτική, οργανωμένη οικονομική πληροφόρηση και ολοκληρωμένη λογιστική και φορολογική υποστήριξη.',heroBtn1:'Δείτε τις υπηρεσίες',heroBtn2:'Επικοινωνήστε μαζί μας',approachLabel:'Η προσέγγισή μας',approachTitle:'Από τους αριθμούς, στη διοικητική εικόνα.',m1:'Οργάνωση, ανάπτυξη, κοστολόγηση & αποφάσεις',m2:'Budgets, cash flow, forecasts & reporting',m3:'Συστηματική λογιστική και φορολογική υποστήριξη',trust1t:'Οργάνωση',trust1p:'Καθαρή δομή και συνέπεια',trust2t:'Πληροφόρηση',trust2p:'Οικονομική εικόνα που γίνεται κατανοητή',trust3t:'Στρατηγική',trust3p:'Σύνδεση αριθμών με αποφάσεις',trust4t:'Υποστήριξη',trust4p:'Άμεση και πρακτική συνεργασία',svcK:'Υπηρεσίες',svcT:'Από την οικονομική εικόνα, στη σωστή επιχειρηματική κατεύθυνση.',svcI:'Από την καθημερινή λογιστική και φορολογική παρακολούθηση έως μισθοδοσία, συντάξεις, εταιρικά θέματα, χρηματοοικονομική πληροφόρηση και ανάπτυξη επιχειρήσεων.',
+sv1t:'Λογιστικά & Φορολογικά',sv1p:'Τήρηση βιβλίων, φορολογικές δηλώσεις, ΦΠΑ, myDATA, VIES, Intrastat και συστηματική φορολογική συμμόρφωση.',
+sv2t:'Μισθοδοσία & Εργατικά',sv2p:'Υπολογισμός μισθοδοσίας, προσλήψεις, αποχωρήσεις, άδειες και υποστήριξη εργατικών και ασφαλιστικών υποχρεώσεων.',
+sv3t:'Συντάξεις & Ιδιώτες',sv3p:'Υποστήριξη συνταξιοδοτικών διαδικασιών, φορολογικών δηλώσεων και λοιπών υποθέσεων φυσικών προσώπων.',
+sv4t:'Επιχειρήσεις & Εταιρικά',sv4p:'Συστάσεις και μεταβολές εταιρειών, εταιρική συμμόρφωση, οικονομική παρακολούθηση και πρακτική υποστήριξη επιχειρήσεων.',
+sv5t:'Financial & Management Reporting',sv5p:'Budgets, cash flow, forecasts, κοστολόγηση, οικονομικοί δείκτες και διοικητική πληροφόρηση για καλύτερες αποφάσεις.',
+sv6t:'Επιδοτήσεις & Ανάπτυξη',sv6p:'Υποστήριξη επενδυτικών προγραμμάτων, business planning και σχεδιασμός ανάπτυξης της επιχείρησης.',services:[['Business & Tax Consulting','Συμβουλευτική για οργάνωση, ανάπτυξη, κοστολόγηση, κερδοφορία και αξιολόγηση επιχειρηματικών αποφάσεων.'],['Payroll & Labour','Budgeting, cash flow, χρηματοοικονομικές προβλέψεις και ανάλυση βασικών οικονομικών δεικτών.'],['Tax & Accounting','Business plans, επενδυτικός σχεδιασμός και αξιολόγηση νέων επιχειρηματικών πρωτοβουλιών.'],['Pensions & Individuals','Μετατροπή οικονομικών δεδομένων σε χρήσιμα reports διοίκησης και πρακτική πληροφόρηση.'],['Companies & Compliance','Οργάνωση λογιστικών υποχρεώσεων, συστηματική παρακολούθηση και φορολογική υποστήριξη.'],['Funding & Business Support','Άμεση συνεργασία με την επιχείρησή σας και δυνατότητα επίσκεψης στον χώρο σας όπου απαιτείται.']],aboutK:'Ποιοι είμαστε',aboutT:'Οικονομική πληροφόρηση με επιχειρηματική οπτική.',aboutP1:'Η MGT συνδυάζει επιχειρηματική και χρηματοοικονομική συμβουλευτική με λογιστική και φορολογική υποστήριξη, με έμφαση στην καθαρή πληροφόρηση, την ταχύτητα και τη σύγχρονη οργάνωση.',aboutP2:'Στόχος μας είναι η οικονομική πληροφορία να είναι έγκαιρη, κατανοητή και ουσιαστικά χρήσιμη για τη λήψη αποφάσεων.',p1t:'Καθαρή πληροφόρηση',p1p:'Η εικόνα της επιχείρησης παρουσιάζεται με τρόπο πρακτικό και κατανοητό.',p2t:'Συστηματική παρακολούθηση',p2p:'Οργάνωση, συνέπεια και έγκαιρη ενημέρωση.',p3t:'Business-first προσέγγιση',p3p:'Δεν βλέπουμε τη λογιστική απομονωμένα από την επιχείρηση.',p4t:'Άμεση συνεργασία',p4p:'Πρακτική επικοινωνία και δυνατότητα on-site υποστήριξης.',procK:'Πώς συνεργαζόμαστε',procT:'Μια καθαρή διαδικασία, με ξεκάθαρα βήματα.',procI:'Το πλαίσιο συνεργασίας προσαρμόζεται στο μέγεθος, το αντικείμενο και τις πραγματικές ανάγκες της κάθε επιχείρησης.',steps:[['01','Επικοινωνία','Μας περιγράφετε συνοπτικά την επιχείρηση και τις ανάγκες σας.'],['02','Αποτύπωση αναγκών','Εξετάζουμε το πλαίσιο συνεργασίας και τις πληροφορίες που απαιτούνται.'],['03','Πρόταση προσέγγισης','Ορίζουμε το κατάλληλο πλαίσιο οικονομικής και επιχειρηματικής υποστήριξης.'],['04','Συνεργασία','Οργανώνουμε την πληροφορία και ξεκινά η συστηματική υποστήριξη.']],whyK:'Why MGT',whyT:'Πιο κοντά στην επιχείρηση. Πιο καθαρά στους αριθμούς.',why:[['Business-first προσέγγιση','Συνδέουμε τη λογιστική και την οικονομική πληροφόρηση με τις πραγματικές επιχειρηματικές αποφάσεις.'],['Ευέλικτη συνεργασία','Η συνεργασία μπορεί να αφορά ένα συγκεκριμένο ζήτημα ή ένα ευρύτερο πλαίσιο υποστήριξης.'],['Σύγχρονη οργάνωση','Δομημένη πληροφορία, καθαρή επικοινωνία και συστηματική παρακολούθηση.'],['Άμεση επαφή','Πρακτική και άμεση συνεργασία, με on-site υποστήριξη όπου απαιτείται.']],contactK:'Επικοινωνία',contactT:'Ας συζητήσουμε τις ανάγκες της επιχείρησής σας.',contactI:'Για πληροφορίες ή μια πρώτη συζήτηση, επικοινωνήστε μαζί μας.',phone:'Τηλέφωνα',office:'Τοποθεσίες',loc1:'Πειραιάς, Αττική',loc2:'Πειραιάς – Βλαχάκου',
+fullTitle:'Ολοκληρωμένη λογιστική και επιχειρηματική υποστήριξη.',
+fs1:'Λογιστικά & Φορολογικά',fd1:'Τήρηση βιβλίων, δηλώσεις, ΦΠΑ, myDATA και φορολογική συμμόρφωση.',
+fs2:'Μισθοδοσία & Εργατικά',fd2:'Μισθοδοσία, προσλήψεις, αποχωρήσεις και υποστήριξη εργατικών υποχρεώσεων.',
+fs3:'Συντάξεις & Ιδιώτες',fd3:'Υποστήριξη φορολογικών υποθέσεων ιδιωτών και συνταξιοδοτικών διαδικασιών.',
+fs4:'Επιχειρήσεις & Εταιρείες',fd4:'Συστάσεις, μεταβολές, οικονομική παρακολούθηση και εταιρική υποστήριξη.',
+fs5:'Financial & Management Reporting',fd5:'Budgets, cash flow, προβλέψεις και διοικητική πληροφόρηση.',
+fs6:'Επιδοτήσεις & Ανάπτυξη',fd6:'Υποστήριξη επενδυτικών προγραμμάτων και επιχειρηματικού σχεδιασμού.',topLocation:'Πειραιάς, Αττική',footerLoc1:'Πειραιάς, Αττική',footerLoc2:'Πειραιάς – Βλαχάκου',call:'Καλέστε μας',email:'Στείλτε email'},
+en:{navServices:'Services',navAbout:'About us',navProcess:'Process',navContact:'Contact',heroEy:'Business · Financial · Accounting',heroTitle:'Financial information that leads to <em>better decisions.</em>',heroLead:'We support businesses and professionals with business and financial consulting, structured financial information, and comprehensive accounting and tax support.',heroBtn1:'Explore services',heroBtn2:'Contact us',approachLabel:'Our approach',approachTitle:'From numbers to management insight.',m1:'Organization, growth, costing & decisions',m2:'Budgets, cash flow, forecasts & reporting',m3:'Structured accounting and tax support',trust1t:'Organization',trust1p:'Clear structure and consistency',trust2t:'Insight',trust2p:'Financial information that makes sense',trust3t:'Strategy',trust3p:'Connecting numbers to decisions',trust4t:'Support',trust4p:'Direct and practical collaboration',svcK:'Services',svcT:'From financial insight to the right business direction.',svcI:'From everyday accounting and tax compliance to payroll, pensions, corporate matters, financial reporting and business growth.',
+sv1t:'Accounting & Tax',sv1p:'Bookkeeping, tax returns, VAT, myDATA, VIES, Intrastat and ongoing tax compliance.',
+sv2t:'Payroll & Labour',sv2p:'Payroll calculations, hiring, departures, leave and support for employment and social-security obligations.',
+sv3t:'Pensions & Individuals',sv3p:'Support with pension procedures, personal tax returns and other individual tax matters.',
+sv4t:'Business & Corporate',sv4p:'Company formations and changes, corporate compliance, financial monitoring and practical business support.',
+sv5t:'Financial & Management Reporting',sv5p:'Budgets, cash flow, forecasts, costing, financial indicators and management insight for better decisions.',
+sv6t:'Funding & Growth',sv6p:'Support for investment programmes, business planning and business growth strategy.',services:[['Business & Tax Consulting','Consulting for organization, growth, costing, profitability and evaluation of business decisions.'],['Payroll & Labour','Budgeting, cash flow, financial forecasts and analysis of key financial indicators.'],['Tax & Accounting','Business plans, investment planning and support in evaluating new business initiatives.'],['Pensions & Individuals','Turning financial data into useful management reports and practical information.'],['Companies & Compliance','Organization of accounting obligations, systematic monitoring and tax support.'],['Funding & Business Support','Direct cooperation with your business and the option of visiting your premises where required.']],aboutK:'About us',aboutT:'Financial information with a business perspective.',aboutP1:'MGT combines business and financial consulting with accounting and tax support, with emphasis on clear information, responsiveness and modern organization.',aboutP2:'Our goal is to make financial information timely, understandable and genuinely useful for decision-making.',p1t:'Clear information',p1p:'The financial picture is presented in a practical and understandable way.',p2t:'Systematic follow-up',p2p:'Organization, consistency and timely information.',p3t:'Business-first approach',p3p:'We do not view accounting separately from the business.',p4t:'Direct collaboration',p4p:'Practical communication and on-site support where required.',procK:'How we work',procT:'A clear process, with straightforward steps.',procI:'The cooperation framework is adapted to the size, scope and real needs of each business.',steps:[['01','Contact','Tell us briefly about your business and your needs.'],['02','Needs assessment','We review the cooperation framework and the information required.'],['03','Proposed approach','We define the right framework for financial and business support.'],['04','Collaboration','We organize the information and begin systematic support.']],whyK:'Why MGT',whyT:'Closer to the business. Clearer on the numbers.',why:[['Business-first approach','We connect accounting and financial information with real business decisions.'],['Flexible collaboration','The engagement can focus on a specific issue or a broader support framework.'],['Modern organization','Structured information, clear communication and systematic monitoring.'],['Direct contact','Practical, direct collaboration with on-site support where required.']],contactK:'Contact',contactT:'Let’s discuss your business needs.',contactI:'For information or an initial conversation, contact us.',phone:'Phones',office:'Locations',loc1:'Piraeus, Attica',loc2:'Vlachakou, Piraeus',
+fullTitle:'Integrated accounting and business support.',
+fs1:'Accounting & Tax',fd1:'Bookkeeping, tax returns, VAT, myDATA and tax compliance.',
+fs2:'Payroll & Labour',fd2:'Payroll, hiring, departures and employment compliance support.',
+fs3:'Pensions & Individuals',fd3:'Support for individual tax matters and pension procedures.',
+fs4:'Companies & Corporate',fd4:'Company formations, changes, financial monitoring and corporate support.',
+fs5:'Financial & Management Reporting',fd5:'Budgets, cash flow, forecasts and management reporting.',
+fs6:'Funding & Growth',fd6:'Support for investment programmes and business planning.',topLocation:'Piraeus, Attica',footerLoc1:'Piraeus, Attica',footerLoc2:'Vlachakou, Piraeus',call:'Call us',email:'Send email'}};
+function render(lang){const d=data[lang];document.documentElement.lang=lang;document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;if(d[k])el.textContent=d[k]});document.querySelectorAll('[data-t-html]').forEach(el=>{const k=el.dataset.tHtml;if(d[k])el.innerHTML=d[k]});document.getElementById('servicesGrid').innerHTML=d.services.map((s,i)=>`<article class="service-card"><div class="num">0${i+1}</div><h3>${s[0]}</h3><p>${s[1]}</p><div class="line"></div></article>`).join('');document.getElementById('stepsGrid').innerHTML=d.steps.map(s=>`<article class="step"><div class="n">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p></article>`).join('');document.getElementById('whyGrid').innerHTML=d.why.map(s=>`<article class="why-item"><h3>${s[0]}</h3><p>${s[1]}</p></article>`).join('');document.getElementById('elBtn').classList.toggle('active',lang==='el');document.getElementById('enBtn').classList.toggle('active',lang==='en');localStorage.setItem('mgtLang',lang)}
+document.getElementById('elBtn').onclick=()=>render('el');document.getElementById('enBtn').onclick=()=>render('en');render(localStorage.getItem('mgtLang')==='en'?'en':'el');
+</script>
+</body>
+</html>
